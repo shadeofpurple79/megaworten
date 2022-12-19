@@ -1,4 +1,10 @@
 
+/* mobile-first design */
+/* grid structure styling */
+
+body {
+  background-color: lightseagreen;
+}
 .container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -37,3 +43,9 @@
     padding: 10px;
   }
   
+
+
+  /* tablet view */
+
+
+  /* desktop view */
