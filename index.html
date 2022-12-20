@@ -14,17 +14,25 @@
         <!-- first row of grid - header: logo, strapline, link to game rules new page -->
         <div class="game-header">Mega Worten Logo<br>
             <a href="/index.html">Home</a><br>
-            <a href="/game-rules.html">Game Rules</a><br>
+            <a href="#game-rules">Game Rules</a><br>
             Improve your German vocabulary and spelling<br>
         </div>
 
         <!-- second row of grid - game controls: select game category, timer, play button, reset button, score -->
-        <div class="game-controls">Game Controls<br>
-            select game category<br>
-            timer<br>
-            play button<br>
-            reset button<br>
-            your score<br>
+        <div class="game-controls">
+            <h2>Game Controls</h2>
+            <div id="game-category">
+                <label for="category-select">Select game category:</label>
+                <select name="category-select" id="category-select">
+                <option value="fruits">Fruits</option>
+                <option value="animals">Animals</option>
+                </select>
+            </div>
+
+            <button id="play-button">PLAY</button>
+            <button id="reset-button">RESET</button>
+            <div id="timer">60</div>
+            <div id="score">0</div> 
         </div>
 
         <!-- third row of grid - main game: split into 2 vertical areas. -->
@@ -40,10 +48,23 @@
             <!-- button to stop the game, reset the score and start the game again -->
 
         </div>
-        
-        <!-- fourth row of grid - footer: like this game? thumbs up or down, vote count, share on insta  -->
+       
+        <!-- fourth row of grid - game rules anchor link  -->
+        <div id="game-rules">
+            <h2>Game Rules</h2>
+            <ul>
+                <li>You have 60 seconds to complete the game.</li>
+                <li>When you see the picture, type in the German word including the article.</li>
+                <li>Words are not case sensitive. </li>
+                <li>If you answer incorrectly, the same picture will come up again randomly.</li>
+                <li>If you answer correctly, the same picture will not come up during the same game. </li>
+                <li></li>
+            </ul>
+        </div>
+
+        <!-- fifth row of grid - footer: like this game? thumbs up or down, vote count, share on insta  -->
         <div class="footer-social">Footer Social<br>
-            like this game? <br>
+            <h2>Like this game?</h2>
             thumbs up or down<br>
             vote count<br>
             share on insta<br>
@@ -52,7 +73,7 @@
       </div>
 
 
-
+      
     
 
     
