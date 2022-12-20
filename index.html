@@ -12,10 +12,11 @@
     <div class="container">
 
         <!-- first row of grid - header: logo, strapline, link to game rules new page -->
-        <div class="game-header">Mega Worten Logo<br>
-            <a href="/index.html">Home</a><br>
-            <a href="#game-rules">Game Rules</a><br>
-            Improve your German vocabulary and spelling<br>
+        <div class="game-header">
+            <h1>Mega Worten Logo</h1>
+            <h2><a href="/index.html">Home</a></h2>
+            <h2><a href="#game-rules">Game Rules</a></h2>
+            <h3>Improve your German vocabulary and spelling</h3>
         </div>
 
         <!-- second row of grid - game controls: select game category, timer, play button, reset button, score -->
@@ -39,14 +40,18 @@
             <!-- on the left: show fruit or animal images. number of images left in game  -->
             <!-- on the right: input field for player to type answer. current score. option to reset game.  -->
         <div class="main-game-cards">Main Game Cards<br>
-
+           
         </div>
         <div class="main-game-answers">Main Game Answers<br>
             <!-- text input field for player to type in the answer -->
             <!-- press enter to submit answer, no submit button to play the game faster -->
             <!-- if answer is correct, increase score by 1 -->
             <!-- button to stop the game, reset the score and start the game again -->
-
+            <form id="player-answers">
+                <label id="player-input">Was ist das?</label>
+                <input type="text" id="player-answer" placeholder="type here">
+                <button type="submit">Submit</button>
+            </form>
         </div>
        
         <!-- fourth row of grid - game rules anchor link  -->
@@ -70,7 +75,7 @@
             share on insta<br>
         </div>
         
-      </div>
+    </div>
 
 
       
