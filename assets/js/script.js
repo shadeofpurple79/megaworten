@@ -1,19 +1,18 @@
 
 // game variables
+let = play
+let = reset
 let words = [];
 let word = "";
-let score = 0;
-let elapsedTime = 0;
 
-// create game categories
+// Set the initial score and elapsed time to zero
+let score = 0;
+let timer = 0;
+
+// game categories
 const gameCategories = ["Fruits", "Animals"];
 
-// select game category
-    if (category === "Fruits") {
-        words = fruitWords;
-    } else if (category === "Animals") {
-        words = animalWords;
-    }
+// game cards
   
 // create words for each fruit and map them to each fruit image
 const fruitWords = [
@@ -42,12 +41,34 @@ const animalWords = [
     {name:"die Schildkrote", url: "assets/images/turtle.png""}
 ]
 
-// Set the initial score and elapsed time
-    score = 0;
-    elapsedTime = 0;
+// select game category
+if (category === "Fruits") {
+    words = fruitWords;
+    numberOfCardsInSelectedCategory = fruitWords.length
+} else if (category === "Animals") {
+    words = animalWords;
+    numberOfCardsInSelectedCategory = animalWords.length
+}
+
+// Select a random game card to display
+    function displayGameCard() {
+        // Generate a random number to be used for displaying game cards
+        const randomNumber = Math.floor(Math.random()) * numberOfCardsInSelectedCategory
+        console.log(randomNumber)
+        if (randomNumber === 1) {
+            displayGameCard = "der Apfel"
+        }
+        if (randomNumber === 2) {
+            displayGameCard = "die Banana"
+        }
+    }
+    displayGameCard.innerHTML = displayGameCard;
+
+// Start timer countdown when game starts
+
 
 // If the elapsed time has reached 60 seconds, end the game
-    if (elapsedTime === 60) {
+    if (timer === 60) {
         endGame();
     } { (1000);
     }
@@ -56,10 +77,7 @@ const animalWords = [
 
 
 
-// randomly show a fruit image
 
-
-// randomly show an animal image
 
 
 
