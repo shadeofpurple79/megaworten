@@ -14,7 +14,7 @@ rules:
     player must complete the game in 60 seconds
     player must answer all words correctly
     words are not case-sensitive
-    words cannot have spaces
+    words cannot have spaces -- this requirement has been removed due to German words having unique articles
     incorrect words will appear to the player again until they're answered correctly
     correct words will not appear to the player again
    
@@ -36,3 +36,6 @@ game layout:
     fotter section: like this game? thumbs up or down, vote count, share on insta
 
 
+WIREFRAME GAME FLOW
+
+![Basic game flow chart](/assets/images/readme-images/Mega%20Worten%20German%20Word%20Game.png "Basic game flow chart")
