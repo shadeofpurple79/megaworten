@@ -20,20 +20,21 @@
         </div>
 
         <!-- second row of grid - game controls: select game category, show timer, play button to start game, reset button to stop game, show score -->
+        <!-- show a dropdown to select one of two options when page is loaded or reset button is clicked -->
+        <!-- when a game category selection is made, show play button -->
         <div class="game-controls">
             <h2>Game Controls</h2>
-            <div id="game-category">
-                <label for="category-select">Select game category:</label>
-                <select name="category-select" id="category-select">
-                <option value="fruits">Fruits</option>
-                <option value="animals">Animals</option>
-                </select>
+            <div id="category-dropdown">
+                <button onclick="showDropdown()">Select a game category:</button>
+                <div id="dropdown-content">
+                  <a href="#" onclick="selectCategory('category1')">Fruits</a>
+                  <a href="#" onclick="selectCategory('category2')">Animals</a>
+                </div>
             </div>
-
-            <button id="play-button">PLAY</button>
-            <button id="reset-button">RESET</button>
-            <div id="timer">60</div>
-            <div id="score">0</div> 
+              
+            <div id="play-button" style="display:none;">
+                <button onclick="play()">Play</button>
+            </div>  
         </div>
 
         <!-- third row of grid - main game: split into 2 vertical areas. -->
@@ -76,22 +77,6 @@
         </div>
         
     </div>
-
-
-      
-    
-
-    
-
-    
-    
-    
-    
-
-
-
-
-
     <script src="assets/js/script.js"></script>
 </body>
 </html>

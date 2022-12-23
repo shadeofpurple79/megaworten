@@ -39,3 +39,41 @@ game layout:
 WIREFRAME GAME FLOW
 
 ![Basic game flow chart](/assets/images/readme-images/Mega%20Worten%20German%20Word%20Game.png "Basic game flow chart")
+
+CODING STEPS
+
+// On pageload, or on reset buttonclick, or play-again buttonclick, show game category selection dropdown
+
+// Listen for game category selection
+
+// Show PLAY button
+
+// Listen for PLAY button click
+
+// Reset timer, Reset score
+
+// Start countdown timer
+
+// Throughout the game, Listen for RESET button click, back to first step when clicked
+
+// Show cards count in the selected game category
+
+// Show a random card from selected game category
+
+// Listen for player answer
+
+// Check answer
+
+  // Wrong answer == > go back to Show a random card from selected game category
+
+  // Correct answer == > Remove card from game, increase score by 1, decrease card count in the selected game category by 1
+
+// check elapsed time
+
+  // timer NOT zero, card count NOT zero == > back to Show a random card from selected game category
+
+  // timer zero, card count NOT zero == > Game over, you lost, play again?
+
+  // timer NOT zero, card count zero == > congrats, you won, play again?
+
+  // Listen for player answer == > back to first step
