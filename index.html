@@ -25,16 +25,17 @@
         <div class="game-controls">
             <h2>Game Controls</h2>
             <div id="category-dropdown">
-                <button onclick="showDropdown()">Select a game category:</button>
-                <div id="dropdown-content">
-                  <a href="#" onclick="selectCategory('category1')">Fruits</a>
-                  <a href="#" onclick="selectCategory('category2')">Animals</a>
-                </div>
+                <h3> Select a game category:</h3>
+                <select name="dropdown-content" id="dropdown-content">
+                    <option value = "">Select...</option>
+                    <option value = "fruits">Fruits</option>
+                    <option value = "animals">Animals</option>
+                </select>
             </div>
-              
-            <div id="play-button" style="display:none;">
-                <button onclick="play()">Play</button>
-            </div>  
+            <button id="play-button" style="display:block;">Play</button>
+            <button id="reset-button" style="display:block;">Reset</button>
+            <div id="timer">60</div>
+            <div id="score">0</div>
         </div>
 
         <!-- third row of grid - main game: split into 2 vertical areas. -->
