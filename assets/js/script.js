@@ -1,20 +1,13 @@
-const gameControls = document.getElementById ('game-controls')
-const categoryDropdown = document.getElementById ('category-dropdown')
-const dropdownContent = document.getElementById ('dropdown-content')
-const gameCards = document.getElementById ('game-cards')
-const gameAnswers = document.getElementById ('game-answers')
-const playerAnswers = document.getElementById ('player-answers')
-const playButton = document.getElementById ('play-button')
-const resetButton = document.getElementById ('reset-button')
-
-// game variables
-let = play
-let = reset
-let words = [];
-let word = "";
-
-// game categories
-const gameCategories = ["Fruits", "Animals"];
+// game state before the player clicks PLAY button
+let isAlive = false 
+let gameWords = []
+let gameTimer = 0
+let playerScore = 0
+let message = ""
+let playerAnswers = ""
+let playerMessage = document.getElementById("player-message")
+let gameCard = document.getElementById("game-card")
+let gameCategorySelection = document.getElementById("game-category-selection")
 
 // create words for each fruit and map them to each fruit image
 const fruitWords = [
@@ -43,77 +36,70 @@ const animalWords = [
   {name:"die Schildkrote", img: "assets/images/turtle.png"},
 ]
 
-// On pageload, show game category selection dropdown
-window.onload = function() {
-  document.getElementById("dropdown-content").style.display = "block";
+// player clicks PLAY button
+function startGame() {
+      console.log("game started")
+      playGame()
 }
 
-// Listen for game category selection
- if (dropdownContent === "Fruits") {
-  words = fruitWords;
-  numberOfCardsInSelectedCategory = fruitWords.length
-} else if (dropdownContent === "Animals") {
-  words = animalWords;
-  numberOfCardsInSelectedCategory = animalWords.length
-}
-document.getElementById(words).style.display = "block";
-
-// Show PLAY button, ---Hide the dropdown menu
-function showPlay() {
-  document.getElementById("play-button").style.display = "block";
+// player clicks RESET button
+function restartGame() {
+      console.log("game reset and restarted")
+      gameWords = []
+      gameTimer = 0
+      playerScore = 0
+      playGame()
 }
 
-// On reset buttonclick, show game category selection dropdown
-resetButton.addEventListener("click", () => {
-  document.getElementById("dropdown-content").style.display = "block";
-})
-
-// On play-again buttonclick, show game category selection dropdown
-playButton.addEventListener("click", () => {
-  document.getElementById("dropdown-content").style.display = "block";
-})
-
-// Reset timer, Reset score
-    let score = 0;
-    let timer = 0;
-    // Start countdown
-    var count = 60, timer = setInterval(function() {
-      $("#counter").html(count--);
-      if(count == 1) clearInterval(timer);
-  }, 1000);
-
-
-// Show cards count in the selected game category
-
-// for 60 seconds
-     
-  // Show a random card from selected game category
-
-  // Listen for player answer
-
-  // Check answer
-
-    // Wrong answer == > go back to Show a random card from selected game category
-
-    // Correct answer == > Remove card from game, increase score by 1, decrease card count in the selected game category by 1
-
-// check elapsed time
-  function timer() {
-    if (elapsedTime === 60) {
-      endGame()
-    }
-    1000;;
+// player selects game category 
+function gameCategory() {
+  if (gameCategorySelection === "Fruits") {
+    gameWords = [fruitWords]
+    message = "you selected fruits"
+  } else { (gameCategorySelection === "Animals")
+  gameWords = [animalWords]
+  message = "you selected animals"
   }
-  // timer NOT zero, card count NOT zero == > back to Show a random card from selected game category
+  playerMessage.textContent = message
+}
 
-  // timer zero, card count NOT zero == > Game over, you lost, play again?
+// function for timer countdown
+function gameCountdown () {
 
-  // timer NOT zero, card count zero == > congrats, you won, play again?
+}
 
-  // Listen for player answer == > back to first step
+// call game when play button or reset button are clicked
+function playGame() {
+   // call timer countdown function 
+   isAlive = true  
+    //  from the selected game category, show a word card until all cards are correctly answered
+
+     
+      // loop:
+      // show a random word from the selected game category
+      // wait for player answr, check answer
+      // if correct, increase score by 1, remove card from the array, show a new random card 
+      // if wrong, show a new random card
+      // end the game if timer reaches 60 seconds or no cards left in the array
+
+      for (i = 0; i < gameWords.length; i++) {
+        gameCard.textContent = word
+      }
+      function getRandomWord() {
+        let randomNumber = Math.floor(Math.random() * gameWords.length) + 1
+        gameCard.textContent = word
+      }
+
+
+      // ending game
+      // timer NOT zero, card count NOT zero == > back to Show a random card from selected game category
+
+      // timer zero, card count NOT zero == > Game over, you lost, play again?
+
+      // timer NOT zero, card count zero == > congrats, you won, play again?
+
+      // Listen for player answer == > back to first step
 
 
 
-
-
-
+}
