@@ -25,17 +25,12 @@
         <div class="game-controls">
             <h2>Game Controls</h2>
             <p id="player-message"> Select a game category and click PLAY button</p>
-           
-            <h3> Select a game category:</h3>
-                <select name="game-selection" id="game-category-selection">
-                    <option value = "">Select...</option>
-                    <option value = "fruits">Fruits</option>
-                    <option value = "animals">Animals</option>
-                </select>
+            <span><button id = "fruits-btn" onclick = "categoryFruits()">FRUITS</button></span>
+            <span><button id = "animals-btn" onclick = "categoryAnimals()">ANIMALS</button></span>
             <span><button id = "play-btn" onclick = "startGame()">PLAY</button></span>
             <span><button id = "reset-btn" onclick = "restartGame()">RESET</button></span>
 
-
+        </div>
 
 
         
@@ -44,7 +39,8 @@
             <!-- on the left: show fruit or animal images. number of images left in game  -->
             <!-- on the right: input field for player to type answer. current score. option to reset game.  -->
         <div class="game-cards">Game Cards<br>
-            <p id="game-card">Question Card:</p>
+            <p>Question Card:</p>
+            <img id="game-words" src="assets/images/spacer.png" width="100" height="100" alt="blank image">
         </div>
         <div class="game-answers">Game Answers<br>
             <!-- text input field for player to type in the answer -->

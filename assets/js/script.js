@@ -1,28 +1,55 @@
 // game state before the player clicks PLAY button
 let isAlive = false 
-let gameWords = []
 let gameTimer = 0
 let playerScore = 0
 let message = ""
 let playerAnswers = ""
 let playerMessage = document.getElementById("player-message")
 let gameCard = document.getElementById("game-card")
-let gameCategorySelection = document.getElementById("game-category-selection")
+let gameWords = document.getElementById("game-words")
+
+// let categoryFruits = document.getElementsById("fruits-btn")
+// let categoryAnimals = document.getElementsById("animals-btn")
+
+// player selects game category 
+function categoryFruits(){
+  gameWords = [fruitWords]
+  console.log("fruits category selected")
+}
+
+function categoryAnimals(){
+  gameWords = [animalWords]
+  console.log("animals category selected")
+}
+
+// function gameCategory() {
+//   if (gameCategorySelection === "Fruits") {
+//     console.log("fruits selected")
+//     gameWords = [fruitWords]
+//     message = "you selected fruits"
+//   } else { (gameCategorySelection === "Animals")
+//   console.log("animals selected")
+//   gameWords = [animalWords]
+//   message = "you selected animals"
+//   }
+//   playerMessage.textContent = message
+// }
 
 // create words for each fruit and map them to each fruit image
 const fruitWords = [
-  {name: "der Apfel", img: "assets/images/apple.png",}
-  {name: "die Banana", img: "assets/images/banana.png",}
-  {name: "die Zitrone", img: "assets/images/lemon.png",}
-  {name: "die Orange", img: "assets/images/orange.png",}
+  {name: "der Apfel", img: "assets/images/apple.png"},
+  {name: "die Banana", img: "assets/images/banana.png"},
+  {name: "die Zitrone", img: "assets/images/lemon.png"},
+  {name: "die Orange", img: "assets/images/orange.png"},
   {name: "der Pfirsich", img: "assets/images/peach.png"},
   {name: "die Birne", img: "assets/images/pear.png"},
   {name: "die Ananas", img: "assets/images/pineapple.png"},
   {name: "die Pflaume", img: "assets/images/plum.png"},
   {name: "der Granatapfel", img: "assets/images/pomegranet.png"},
   {name: "die Erdbeere", img: "assets/images/strawberry.png"},
-  {name: "die Wassermelone", img: "assets/images/watermelon.png"},
+  {name: "die Wassermelone", img: "assets/images/watermelon.png"}
 ]
+
 
 // create words for each animal and map them to each animal image
 const animalWords = [
@@ -33,35 +60,25 @@ const animalWords = [
   {name:"der Wellensittich", img: "assets/images/parrot.png"},
   {name:"das Kaninchen", img: "assets/images/rabbit.png"},
   {name:"die Schlange", img: "assets/images/snake.png"},
-  {name:"die Schildkrote", img: "assets/images/turtle.png"},
+  {name:"die Schildkrote", img: "assets/images/turtle.png"}
 ]
 
 // player clicks PLAY button
 function startGame() {
-      console.log("game started")
+      console.log("play button clicked")
       playGame()
 }
 
 // player clicks RESET button
 function restartGame() {
-      console.log("game reset and restarted")
+      console.log("reset button clicked")
       gameWords = []
       gameTimer = 0
       playerScore = 0
       playGame()
 }
 
-// player selects game category 
-function gameCategory() {
-  if (gameCategorySelection === "Fruits") {
-    gameWords = [fruitWords]
-    message = "you selected fruits"
-  } else { (gameCategorySelection === "Animals")
-  gameWords = [animalWords]
-  message = "you selected animals"
-  }
-  playerMessage.textContent = message
-}
+
 
 // function for timer countdown
 function gameCountdown () {
@@ -72,22 +89,22 @@ function gameCountdown () {
 function playGame() {
    // call timer countdown function 
    isAlive = true  
+   console.log("game started")
     //  from the selected game category, show a word card until all cards are correctly answered
-
-     
       // loop:
       // show a random word from the selected game category
-      // wait for player answr, check answer
+      // wait for player answer, check answer
       // if correct, increase score by 1, remove card from the array, show a new random card 
       // if wrong, show a new random card
       // end the game if timer reaches 60 seconds or no cards left in the array
 
+
       for (i = 0; i < gameWords.length; i++) {
-        gameCard.textContent = word
+        gameWords.textContent = word
       }
       function getRandomWord() {
         let randomNumber = Math.floor(Math.random() * gameWords.length) + 1
-        gameCard.textContent = word
+        gameWords.textContent = word
       }
 
 

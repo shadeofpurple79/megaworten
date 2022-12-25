@@ -24,13 +24,13 @@ body {
     grid-column: 1/3;
     padding: 10px;
   }
-  .main-game-cards {
+  .game-cards {
     background: greenyellow;
     grid-row: 3; 
     grid-column: 1/2; 
     padding: 10px;
   }
-  .main-game-answers {
+  .game-answers {
     background: brown;
     grid-row: 3; 
     grid-column: 2/3; 
