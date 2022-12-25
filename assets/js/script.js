@@ -2,38 +2,16 @@
 let isAlive = false 
 let gameTimer = 0
 let playerScore = 0
-let message = ""
+// let message = ""
 let playerAnswers = ""
 let playerMessage = document.getElementById("player-message")
-let gameCard = document.getElementById("game-card")
+let playerAnswer = document.getElementById("player-answer")
+// let gameCard = document.getElementById("game-card")
 let gameWords = document.getElementById("game-words")
+let answerBtn = document.getElementById("answer-btn")
 
 // let categoryFruits = document.getElementsById("fruits-btn")
 // let categoryAnimals = document.getElementsById("animals-btn")
-
-// player selects game category 
-function categoryFruits(){
-  gameWords = [fruitWords]
-  console.log("fruits category selected")
-}
-
-function categoryAnimals(){
-  gameWords = [animalWords]
-  console.log("animals category selected")
-}
-
-// function gameCategory() {
-//   if (gameCategorySelection === "Fruits") {
-//     console.log("fruits selected")
-//     gameWords = [fruitWords]
-//     message = "you selected fruits"
-//   } else { (gameCategorySelection === "Animals")
-//   console.log("animals selected")
-//   gameWords = [animalWords]
-//   message = "you selected animals"
-//   }
-//   playerMessage.textContent = message
-// }
 
 // create words for each fruit and map them to each fruit image
 const fruitWords = [
@@ -63,6 +41,33 @@ const animalWords = [
   {name:"die Schildkrote", img: "assets/images/turtle.png"}
 ]
 
+
+// player selects game category 
+function categoryFruits(){
+  gameWords = [fruitWords]
+  console.log("fruits category selected")
+}
+
+function categoryAnimals(){
+  gameWords = [animalWords]
+  console.log("animals category selected")
+}
+
+// function gameCategory() {
+//   if (gameCategorySelection === "Fruits") {
+//     console.log("fruits selected")
+//     gameWords = [fruitWords]
+//     playerMessage = "you selected fruits"
+//   } else { (gameCategorySelection === "Animals")
+//   console.log("animals selected")
+//   gameWords = [animalWords]
+//   message = "you selected animals"
+//   }
+//   playerMessage.textContent = message
+// }
+
+
+
 // player clicks PLAY button
 function startGame() {
       console.log("play button clicked")
@@ -90,6 +95,12 @@ function playGame() {
    // call timer countdown function 
    isAlive = true  
    console.log("game started")
+   let randomIndex = Math.floor(Math.random() * gameWords.length) + 1
+   console.log(gameWords)  
+   gameWords.textContent = gameWords
+   return gameWords[randomIndex]
+}
+
     //  from the selected game category, show a word card until all cards are correctly answered
       // loop:
       // show a random word from the selected game category
@@ -99,14 +110,17 @@ function playGame() {
       // end the game if timer reaches 60 seconds or no cards left in the array
 
 
-      for (i = 0; i < gameWords.length; i++) {
-        gameWords.textContent = word
-      }
-      function getRandomWord() {
-        let randomNumber = Math.floor(Math.random() * gameWords.length) + 1
-        gameWords.textContent = word
-      }
+      // for (i = 0; i < gameWords.length; i++) {
+      //   gameWords.textContent = word
+      // }
+      // function getRandomWord() {
+      //   let randomNumber = Math.floor(Math.random() * gameWords.length) + 1
+      //   gameWords.textContent = word
+      // }
 
+      function getAnswer() {
+        console.log("got player answer")
+      }
 
       // ending game
       // timer NOT zero, card count NOT zero == > back to Show a random card from selected game category
@@ -119,4 +133,4 @@ function playGame() {
 
 
 
-}
+
