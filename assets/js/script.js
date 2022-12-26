@@ -3,12 +3,13 @@ let isAlive = false
 let gameTimer = 0
 let playerScore = 0
 // let message = ""
-let playerAnswers = ""
+let playerAnswers = []
 let playerMessage = document.getElementById("player-message")
-let playerAnswer = document.getElementById("player-answer")
+const playerAnswer = document.getElementById("player-answer")
+const answerBtn = document.getElementById("answer-btn")
 // let gameCard = document.getElementById("game-card")
 let gameWords = document.getElementById("game-words")
-let answerBtn = document.getElementById("answer-btn")
+
 
 // let categoryFruits = document.getElementsById("fruits-btn")
 // let categoryAnimals = document.getElementsById("animals-btn")
@@ -86,13 +87,24 @@ function restartGame() {
 
 
 // function for timer countdown
-function gameCountdown () {
-
+function gameCountdown(seconds) {
+  let counter = seconds;
+    
+  const interval = setInterval(() => {
+    console.log(counter);
+    counter--;
+      
+    if (counter < 0 ) {
+      clearInterval(interval);
+      console.log('time out game over');
+    }
+  }, 1000);
 }
 
 // call game when play button or reset button are clicked
 function playGame() {
    // call timer countdown function 
+   gameCountdown()
    isAlive = true  
    console.log("game started")
    let randomIndex = Math.floor(Math.random() * gameWords.length) + 1
@@ -119,9 +131,11 @@ function playGame() {
       // }
 
       function getAnswer() {
-        console.log("got player answer")
+        answerBtn.addEventListener("click", function() {
+        playerAnswers.push(plyerAnswer.value)
+        console.log(playerAnswers)
+        })
       }
-
       // ending game
       // timer NOT zero, card count NOT zero == > back to Show a random card from selected game category
 
