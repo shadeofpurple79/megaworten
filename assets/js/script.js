@@ -11,8 +11,7 @@ const answerBtn = document.getElementById("answer-btn")
 let gameWords = document.getElementById("game-words")
 
 
-// let categoryFruits = document.getElementsById("fruits-btn")
-// let categoryAnimals = document.getElementsById("animals-btn")
+
 
 // create words for each fruit and map them to each fruit image
 const fruitWords = [
@@ -28,7 +27,13 @@ const fruitWords = [
   {name: "die Erdbeere", img: "assets/images/strawberry.png"},
   {name: "die Wassermelone", img: "assets/images/watermelon.png"}
 ]
+console.log(fruitWords.length)
+fruitWords.sort(() => 0.5 - Math.random())
+console.log(fruitWords)
 
+
+const wordDisplay = document.querySelector("#game-cards")
+console.log(wordDisplay)
 
 // create words for each animal and map them to each animal image
 const animalWords = [
@@ -41,31 +46,38 @@ const animalWords = [
   {name:"die Schlange", img: "assets/images/snake.png"},
   {name:"die Schildkrote", img: "assets/images/turtle.png"}
 ]
+console.log(animalWords.length)
+animalWords.sort(() => 0.5 - Math.random())
+console.log(animalWords)
 
+
+let categoryFruits = document.getElementsById("fruits-btn")
+let categoryAnimals = document.getElementsById("animals-btn")
+
+categoryFruits.addEventListener("click", function() {
+   //function to trigger when the button is clicked
+   gameCategory()
+})
+
+categoryAnimals.addEventListener("click", function() {
+  //function to trigger when the button is clicked
+  gameCategory()
+})
 
 // player selects game category 
-function categoryFruits(){
-  gameWords = [fruitWords]
-  console.log("fruits category selected")
+function gameCategory() {
+  // if fruits button is clicked
+  if (gameCategorySelection === "Fruits") {
+    gameWords = [fruitWords]
+    playerMessage = "you selected fruits"
+    // else if animals button is clicked
+  } else { (gameCategorySelection === "Animals")
+    gameWords = [animalWords]
+    message = "you selected animals"
+  }
+  console.log(gameWords)
+  playerMessage.textContent = message
 }
-
-function categoryAnimals(){
-  gameWords = [animalWords]
-  console.log("animals category selected")
-}
-
-// function gameCategory() {
-//   if (gameCategorySelection === "Fruits") {
-//     console.log("fruits selected")
-//     gameWords = [fruitWords]
-//     playerMessage = "you selected fruits"
-//   } else { (gameCategorySelection === "Animals")
-//   console.log("animals selected")
-//   gameWords = [animalWords]
-//   message = "you selected animals"
-//   }
-//   playerMessage.textContent = message
-// }
 
 
 
