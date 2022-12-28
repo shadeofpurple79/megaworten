@@ -119,8 +119,12 @@ function playGame() {
    gameCountdown()
    isAlive = true  
    console.log("game started")
-   for (let = isAlive; i < gameWords.length; i++) {
+   for (let i = 0; i < gameWords.length; i++) {
     const card = document.createElement('img')
+    card.setAttribute('src', "assets/images/spacer.png")
+    card.setAttribute("data-id", i)
+    gridDisplay.appendChild(card)
+    gameWords.appendChild(card)
     console.log(card, i)
     // listen to player answer
     getAnswer()
