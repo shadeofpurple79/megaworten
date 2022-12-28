@@ -51,8 +51,8 @@ animalWords.sort(() => 0.5 - Math.random())
 console.log(animalWords)
 
 
-let categoryFruits = document.getElementsById("fruits-btn")
-let categoryAnimals = document.getElementsById("animals-btn")
+let categoryFruits = document.getElementById("fruits-btn")
+let categoryAnimals = document.getElementById("animals-btn")
 
 categoryFruits.addEventListener("click", function() {
    //function to trigger when the button is clicked
@@ -113,17 +113,26 @@ function gameCountdown(seconds) {
   }, 1000);
 }
 
-// call game when play button or reset button are clicked
+// show main game cards, wait for answer, check answer, show next card
 function playGame() {
    // call timer countdown function 
    gameCountdown()
    isAlive = true  
    console.log("game started")
-   let randomIndex = Math.floor(Math.random() * gameWords.length) + 1
-   console.log(gameWords)  
-   gameWords.textContent = gameWords
-   return gameWords[randomIndex]
+   for (let = isAlive; i < gameWords.length; i++) {
+    const card = document.createElement('img')
+    console.log(card, i)
+    // listen to player answer
+    getAnswer()
+    // check answer, continue loop
+    
+   }
+  //  let randomIndex = Math.floor(Math.random() * gameWords.length) + 1
+  //  console.log(gameWords)  
+  //  gameWords.textContent = gameWords
+  //  return gameWords[randomIndex]
 }
+playGame()
 
     //  from the selected game category, show a word card until all cards are correctly answered
       // loop:
