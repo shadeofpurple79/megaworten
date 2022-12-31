@@ -18,7 +18,15 @@ const generateButton = document.getElementById('generateButton');
 const imageContainer = document.getElementById('imageContainer');
 const imageName = document.getElementById('imageName');
 
-// Listen to player's response with an event listener on the generate button
+// Add player text input field and send button
+const inputName = document.getElementById('inputName');
+const checkButton = document.getElementById('checkButton');
+const result = document.getElementById('result');
+
+// Image name should not be displayed before the player enters input
+imageName.innerHTML = '';
+
+// Listen to player's response with an event listener on the get new card button
 generateButton.addEventListener('click', () => {
   // Show a random word card from the fruits category from the array
   const randomImage = imageArray[Math.floor(Math.random() * imageArray.length)];
@@ -27,16 +35,35 @@ generateButton.addEventListener('click', () => {
   const imageElement = document.createElement('img');
   imageElement.src = randomImage.url;
 
+// Store the displayed image's name in a variable so that we can compare it to player's input later
+  // const currentImageName = randomImage.name
+
 // Set the image name element to the random word image name
   imageName.innerHTML = randomImage.name;
 
 // Clear the image container and append the new image element
   imageContainer.innerHTML = '';
+  result.innerHTML = '';
+  inputName.value = '';
   imageContainer.appendChild(imageElement);
 });
 
+// Add event listener to the check answer button
+  checkButton.addEventListener('click', () => {
+      // Get the player's input name and the current image name
+    const input = inputName.value.toLowerCase(); //convert the player input to lower case so that the answers are not case sensitive
+    const name = imageName.innerHTML.toLowerCase();
+    // check and compare the player's input to the image's actual name and display a message saying it's correct or wrong
+    // if-then statement
+    if (input === name) {
+      result.innerHTML = 'Correct!';
+    } else {
+      result.innerHTML = `Wrong! The correct answer is "${name}".`;
+    }
+  });
 
 
+  
 
 
 
