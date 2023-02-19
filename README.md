@@ -51,6 +51,6 @@ Changes from the original idea:
 
 UPDATED WIREFRAME 
 
-![Basic game flow chart](/assets/images/readme-images/Mega%20Worten%20German%20Word%20Game.png "Basic game flow chart")
+![Basic game flow chart](/assets/images/readme-images/Mega%20Worten%20German%20Word%20Game%20REVISED.png "Basic game flow chart")
 
 
