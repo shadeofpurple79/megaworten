@@ -1,18 +1,101 @@
-/// Array of game word cards - fruits 
-const imageArray = [
-  { url: 'assets/images/apple.png', name: 'der Apfel' },
-  { url: 'assets/images/banana.png', name: 'die Banana' },
-  { url: 'assets/images/lemon.png', name: 'die Zitrone' },
-  { url: 'assets/images/orange.png', name: 'die Orange' },
-  { url: 'assets/images/peach.png', name: 'der Pfirsich' },
-  { url: 'assets/images/pear.png', name: 'die Birne' },
-  { url: 'assets/images/pineapple.png', name: 'die Ananas' },
-  { url: 'assets/images/plum.png', name: 'die Pflaume' },
-  { url: 'assets/images/pomegranet.png', name: 'der Granatapfel' },
-  { url: 'assets/images/strawberry.png', name: 'die Erdbeere' },
-  { url: 'assets/images/watermelon.png', name: 'die Wassermelone' }
+// Create an array of 20 image objects with names in German
+const images = [
+  { src: 'assets/images/apple.png', name: 'der Apfel' },
+  { src: 'assets/images/banana.png', name: 'die Banana' },
+  { src: 'assets/images/lemon.png', name: 'die Zitrone' },
+  { src: 'assets/images/orange.png', name: 'die Orange' },
+  { src: 'assets/images/peach.png', name: 'der Pfirsich' },
+  { src: 'assets/images/pear.png', name: 'die Birne' },
+  { src: 'assets/images/pineapple.png', name: 'die Ananas' },
+  { src: 'assets/images/plum.png', name: 'die Pflaume' },
+  { src: 'assets/images/pomegranet.png', name: 'der Granatapfel' },
+  { src: 'assets/images/strawberry.png', name: 'die Erdbeere' },
+  { src: 'assets/images/watermelon.png', name: 'die Wassermelone' }
 ];
 
+// DOM commands to call HTML elements
+
+
+// Game status at the start, score is zero, full 20 images available, no image is shown to user
+
+
+// Function for starting the game 
+
+
+
+// Pick a random image object from the remaining images
+
+
+
+// Set the image source to the current image and clear the input field
+
+
+// Show the input field and GO button
+
+
+
+// Hide the message and NEXT button
+
+
+
+// Hide the score and reset it to 0
+
+
+
+
+// Add event listener to the GO button
+
+
+
+
+// Function to check user answer
+
+    // Get the user's answer from the input field
+
+
+    // Check if the answer is correct
+
+        // Increase the user's score and display a message
+
+
+        // Remove the current image from the remaining images array
+
+
+        // If there are no more images, display a message and a new game button
+
+
+        // Otherwise, show the NEXT button and add event listener
+
+
+    // Display an incorrect message and show the NEXT button
+
+    // Disable the input field and GO button
+
+
+
+  // Function to show the next image
+
+
+
+      // Pick a random image object from the remaining images
+
+
+      // Set the image source to the current image and clear the input field
+
+
+
+      // Hide the message and NEXT button
+
+
+      // Enable the input field and GO button
+
+
+  // Add event listener to the start button
+
+
+
+
+/*
 // Use the generate button from html, image container, and image name elements
 const generateButton = document.getElementById('generateButton');
 const imageContainer = document.getElementById('imageContainer');
@@ -63,7 +146,10 @@ generateButton.addEventListener('click', () => {
   });
 
 
-  
+  // next steps
+  // remove image text when question card is shown
+  // if answer is correct, remove it from the array
+  // when all images are removed from the array, end game
 
 
 
@@ -246,4 +332,4 @@ generateButton.addEventListener('click', () => {
 
 
 
-
+*/
