@@ -14,23 +14,21 @@ const images = [
 ];
 
 // DOM commands to call HTML elements
- 
+const gameImage = document.getElementById("game-image");
+const gameInput = document.getElementById("game-input");
+const gameBtn = document.getElementById("game-btn");
+const gameMessage = document.getElementById("game-message");
+const nextBtn = document.getElementById("next-btn");
+const score = document.getElementById("user-score");
+const startBtn = document.getElementById("start-btn");
 
-const gameImage = document.getElementById()
-const gameInput = document.getElementById()
-const gameBtn = document.getElementById()
-const gameMessage = document.getElementById()
-const nextBtn = document.getElementById()
-const score = document.getElementById()
-const startBtn = document.getElementById()
 
-"game-image"
-"game-input"
-"game-btn"
-"game-message"
-"next-btn"
-"user-score"
-"start-btn"
+
+
+
+
+
+
 
 // Game status at the start, score is zero, full 20 images available, no image is shown to user
 
