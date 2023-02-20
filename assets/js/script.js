@@ -1,16 +1,24 @@
 // Create an array of 20 image objects with names in German
 const images = [
-  { src: 'assets/images/apple.png', name: 'der Apfel' },
-  { src: 'assets/images/banana.png', name: 'die Banana' },
-  { src: 'assets/images/lemon.png', name: 'die Zitrone' },
-  { src: 'assets/images/orange.png', name: 'die Orange' },
-  { src: 'assets/images/peach.png', name: 'der Pfirsich' },
-  { src: 'assets/images/pear.png', name: 'die Birne' },
-  { src: 'assets/images/pineapple.png', name: 'die Ananas' },
-  { src: 'assets/images/plum.png', name: 'die Pflaume' },
-  { src: 'assets/images/pomegranet.png', name: 'der Granatapfel' },
-  { src: 'assets/images/strawberry.png', name: 'die Erdbeere' },
-  { src: 'assets/images/watermelon.png', name: 'die Wassermelone' }
+  {name: "der Apfel", img: "assets/images/apple.png"},
+  {name: "die Banana", img: "assets/images/banana.png"},
+  {name: "die Zitrone", img: "assets/images/lemon.png"},
+  {name: "die Orange", img: "assets/images/orange.png"},
+  {name: "der Pfirsich", img: "assets/images/peach.png"},
+  {name: "die Birne", img: "assets/images/pear.png"},
+  {name: "die Ananas", img: "assets/images/pineapple.png"},
+  {name: "die Pflaume", img: "assets/images/plum.png"},
+  {name: "der Granatapfel", img: "assets/images/pomegranet.png"},
+  {name: "die Erdbeere", img: "assets/images/strawberry.png"},
+  {name: "die Wassermelone", img: "assets/images/watermelon.png"},
+  {name:"die Katze", img: "assets/images/cat.png"},
+  {name:"der Hund", img: "assets/images/dog.png"},
+  {name:"der Goldfisch", img: "assets/images/goldfish.png"},
+  {name:"die Maus", img: "assets/images/mouse.png"},
+  {name:"der Wellensittich", img: "assets/images/parrot.png"},
+  {name:"das Kaninchen", img: "assets/images/rabbit.png"},
+  {name:"die Schlange", img: "assets/images/snake.png"},
+  {name:"die Schildkrote", img: "assets/images/turtle.png"}
 ];
 
 // DOM commands to call HTML elements
@@ -24,8 +32,11 @@ const userScore = document.getElementById("user-score");
 const startBtn = document.getElementById("start-btn");
 
 // Game status at the start, score is zero, full 20 images available, no image is shown to user
-let userScore = 0;
+// let userScore = 0;
+// copy the images in the original array into a new array called remaining images
+let remainingImages = [...images];   
 let currentImage = {};
+gameBtn.disabled = true;
 
 
 
@@ -35,12 +46,93 @@ function startGame() {
     startBtn.style.display = "none";
 
     // Pick a random image from the remaining game images
+    // calculate how many images left in the array using length, then pick a random image 
     currentImage = remainingImages[Math.floor(Math.random()*remainingImages.length)];
+    console.log(currentImage);
 
     // Show the image in html, show empty text input field
     gameImage.src = currentImage.src;
     gameInput.value = "";
+
+    // Show an empty text input field and GO button
+	  gameInput.style.display = "inline";
+	  gameBtn.style.display = "inline";
+
+	// Hide the message and NEXT button
+	  gameMessage.style.display = "none";
+	  nextBtn.style.display = "none";
+	
+	// Hide the score and reset it to 0
+	  score.style.display = "none";
+	  userScore = 0;
+	
+	// Add event listener to the GO button
+	gameBtn.addEventListener("click", checkAnswer);
+
 }
+
+// Function to check user answer
+function checkAnswer() {
+	// Get the user's answer from the input field
+	currentAnswer = gameInput.value.toLowerCase();
+	
+	// Check if the answer is correct
+	if (currentAnswer === currentImage.name) {
+		// Increase the user's score and display a message
+		userScore++;
+		gameMessage.style.color = "green";
+		gameMessage.innerHTML = "Correct, well done!";
+		
+		// Remove the current image from the remaining images array
+		remainingImages = remainingImages.filter(function(image) {
+			return image !== currentImage;
+		});
+		
+		// If there are no more images, display a message and a new game button
+		if (remainingImages.length === 0) {
+			gameMessage.innerHTML += " You completed the game!";
+			nextBtn.innerHTML = "NEW GAME";
+			nextBtn.removeEventListener("click", nextImage);
+			nextBtn.addEventListener("click", startGame);
+		} else {
+			// Otherwise, show the NEXT button and add event listener
+			nextBtn.style.display = "inline";
+			nextBtn.addEventListener("click", nextImage);
+		}
+	} else {
+		// Display an incorrect message and show the NEXT button
+		gameMessage.style.color = "red";
+		gameMessage.innerHTML = "Incorrect";
+		nextBtn.style.display = "inline";
+		nextBtn.addEventListener("click", nextImage);
+	}
+	
+	// Disable the input field and GO button
+	gameInput.disabled = true;
+	gameBtn.disabled = true;
+}
+
+// Function to show the next image
+function nextImage() {
+	// Pick a random image object from the remaining images
+	currentImage = remainingImages[Math.floor(Math.random() * remainingImages.length)];
+	
+	// Set the image source to the current image and clear the input field
+	gameImage.src = currentImage.src;
+	gameInput.value = "";
+	
+	// Hide the message and NEXT button
+	gameMessage.style.display = "none";
+	nextBtn.style.display = "none";
+	
+	// Enable the input field and GO button
+	gameInput.disabled = false;
+	gameBtn.disabled = false;
+}
+
+// Add event listener to the start button
+startBtn.addEventListener("click", startGame);
+
 
 
 // Pick a random image object from the remaining images
