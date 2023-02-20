@@ -14,7 +14,13 @@ const images = [
 ];
 
 // DOM commands to call HTML elements
-
+"game-input"
+"game-input" 
+"game-btn"
+"game-message"
+"next-btn"
+"user-score"
+"start-btn"
 
 // Game status at the start, score is zero, full 20 images available, no image is shown to user
 

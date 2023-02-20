@@ -47,10 +47,8 @@ FUTURE FEATURES:
 Changes from the original idea:
 - no timer
 - no game category selection
-- 
+- no game reset
 
 UPDATED WIREFRAME 
 
-![Basic game flow chart](/assets/images/readme-images/Mega%20Worten%20German%20Word%20Game%20REVISED.png "Basic game flow chart")
-
-
+![Game flow chart](/assets/images/readme-images/Mega%20Worten%20German%20Word%20Game%20REVISED.png "Game flow chart")
