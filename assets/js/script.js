@@ -61,16 +61,6 @@ function startGame() {
 	  
     // Add event listener to the GO button
 	  gameBtn.addEventListener("click", checkAnswer);
-
-
-	// // Hide the message and NEXT button
-	//   gameMessage.style.display = "none";
-	
-	
-	// // Hide the score and reset it to 0
-	//   score.style.display = "none";
-
-
 }
 
 // Function to check user answer
@@ -80,6 +70,7 @@ function checkAnswer() {
 	  currentAnswer = gameInput.value.toLowerCase();
     console.log(currentAnswer);
     console.log(currentImage.name);
+      
       // Check if the answer is correct
       if (currentAnswer == currentImage.name) {
         // Display congrats message
@@ -89,25 +80,25 @@ function checkAnswer() {
         // Increase the user's score and display new score
         userScore = userScore + 1;
         console.log(userScore);
-        userScore.innerHTML = userScore;
+        userScore.innerText = userScore;   /* BAAAAAAAAAAAHHHHHHHH   */
 
         // Remove the current image from the remaining images array
 		    remainingImages = remainingImages.filter(function(image) {
 			  return image !== currentImage;
 		    });
 		
-              // // If there are no more images, display a message and a new game button to start a new game
-              // if (remainingImages.length === 0) {
-              //   gameMessage.innerHTML += " You completed the game!";
-              //   nextBtn.innerHTML = "NEW GAME";
-              //   nextBtn.removeEventListener("click", nextImage);
-              //   nextBtn.addEventListener("click", startGame);
-              // } else {
-              //   // Otherwise, show the NEXT button and add event listener
-              //   gameBtn.style.display = "inline";
-              //   nextBtn.style.display = "inline";
-              //   nextBtn.addEventListener("click", nextImage);
-              // }
+              // If there are no more images, display a message and a new game button to start a new game
+              if (remainingImages.length === 0) {
+                gameMessage.innerHTML += " You completed the game!";
+                nextBtn.innerHTML = "NEW GAME";
+                nextBtn.removeEventListener("click", nextImage);
+                nextBtn.addEventListener("click", startGame);
+              } else {
+                // Otherwise, show the NEXT button and add event listener
+                gameBtn.style.display = "inline";
+                nextBtn.style.display = "inline";
+                nextBtn.addEventListener("click", nextImage);
+              }
         } else {
           // Display an incorrect message and show the NEXT button
           gameMessage.style.color = "red";
@@ -146,70 +137,6 @@ function nextImage() {
 
 
 
-// Set the image source to the current image and clear the input field
-
-
-// Show the input field and GO button
-
-
-
-// Hide the message and NEXT button
-
-
-
-// Hide the score and reset it to 0
-
-
-
-
-// Add event listener to the GO button
-
-
-
-
-
-
-    // Get the user's answer from the input field
-
-
-    // Check if the answer is correct
-
-        // Increase the user's score and display a message
-
-
-        // Remove the current image from the remaining images array
-
-
-        // If there are no more images, display a message and a new game button
-
-
-        // Otherwise, show the NEXT button and add event listener
-
-
-    // Display an incorrect message and show the NEXT button
-
-    // Disable the input field and GO button
-
-
-
-  
-
-
-
-      // Pick a random image object from the remaining images
-
-
-      // Set the image source to the current image and clear the input field
-
-
-
-      // Hide the message and NEXT button
-
-
-      // Enable the input field and GO button
-
-
-  // Add event listener to the start button
 
 
 
