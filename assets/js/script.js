@@ -1,64 +1,67 @@
 // Create an array of 20 image objects with names in German
 const images = [
-  {name: "der Apfel", src: "assets/images/apple.png"},
-  {name: "die Banana", src: "assets/images/banana.png"},
-  {name: "die Zitrone", src: "assets/images/lemon.png"},
-  {name: "die Orange", src: "assets/images/orange.png"},
-  {name: "der Pfirsich", src: "assets/images/peach.png"},
-  {name: "die Birne", src: "assets/images/pear.png"},
-  {name: "die Ananas", src: "assets/images/pineapple.png"},
-  {name: "die Pflaume", src: "assets/images/plum.png"},
-  {name: "der Granatapfel", src: "assets/images/pomegranet.png"},
-  {name: "die Erdbeere", src: "assets/images/strawberry.png"},
-  {name: "die Wassermelone", src: "assets/images/watermelon.png"},
-  {name:"die Katze", src: "assets/images/cat.png"},
-  {name:"der Hund", src: "assets/images/dog.png"},
-  {name:"der Goldfisch", src: "assets/images/goldfish.png"},
-  {name:"die Maus", src: "assets/images/mouse.png"},
-  {name:"der Wellensittich", src: "assets/images/parrot.png"},
-  {name:"das Kaninchen", src: "assets/images/rabbit.png"},
-  {name:"die Schlange", src: "assets/images/snake.png"},
-  {name:"die Schildkrote", src: "assets/images/turtle.png"}
+  {name: "der apfel", src: "assets/images/apple.png"},
+  {name: "die banana", src: "assets/images/banana.png"},
+  {name: "die zitrone", src: "assets/images/lemon.png"},
+  {name: "die orange", src: "assets/images/orange.png"},
+  {name: "der pfirsich", src: "assets/images/peach.png"},
+  {name: "die birne", src: "assets/images/pear.png"},
+  {name: "die ananas", src: "assets/images/pineapple.png"},
+  {name: "die pflaume", src: "assets/images/plum.png"},
+  {name: "der granatapfel", src: "assets/images/pomegranet.png"},
+  {name: "die erdbeere", src: "assets/images/strawberry.png"},
+  {name: "die wassermelone", src: "assets/images/watermelon.png"},
+  {name:"die katze", src: "assets/images/cat.png"},
+  {name:"der hund", src: "assets/images/dog.png"},
+  {name:"der goldfisch", src: "assets/images/goldfish.png"},
+  {name:"die maus", src: "assets/images/mouse.png"},
+  {name:"der wellensittich", src: "assets/images/parrot.png"},
+  {name:"das kaninchen", src: "assets/images/rabbit.png"},
+  {name:"die schlange", src: "assets/images/snake.png"},
+  {name:"die schildkrote", src: "assets/images/turtle.png"}
 ];
 
 // DOM commands to call HTML elements
-const gameArea = document.getElementById("game-area");
-const gameImage = document.getElementById("game-image");
-const gameInput = document.getElementById("game-input");
-const gameBtn = document.getElementById("game-btn");
-const gameMessage = document.getElementById("game-message");
-const nextBtn = document.getElementById("next-btn");
-const userScore = document.getElementById("user-score");
-const startBtn = document.getElementById("start-btn");
+let gameArea = document.getElementById("game-area");
+let gameImage = document.getElementById("game-image");
+let gameInput = document.getElementById("game-input");
+let gameBtn = document.getElementById("game-btn");
+let gameMessage = document.getElementById("game-message");
+let nextBtn = document.getElementById("next-btn");
+let userScore = document.getElementById("user-score");
+let startBtn = document.getElementById("start-btn");
 
-// Game status at the start, score is zero, full 20 images available, no image is shown to user
-// let userScore = 0;
-// copy the images in the original array into a new array called remaining images
-let remainingImages = [...images];   
+// Game status at the start, score is zero, full set of 20 images available, no image is shown to user
+let remainingImages = [...images];   /* Copy the images in the original array into a new array called remaining images */
 let currentImage = {};
-
+// let score = 0;
+startBtn.style.display = "block";
+gameBtn.style.display = "none";
+nextBtn.style.display = "none";
 
 // Start button - add event listener to the start button to start the game
 startBtn.addEventListener("click", startGame);
 
-// Call function to start the game when start button is clicked  
+// Call the function to start the game when start button is clicked  
 function startGame() {
     // When game starts, hide start button, show game area
     startBtn.style.display = "none";
-
-    // Pick a random image from the remaining game images
-    // calculate how many images left in the array using length, then pick a random image 
+    gameBtn.style.display = "inline";
+  
+    // calculate how many images left in the array using length, then pick a random image from the remaining game images
     currentImage = remainingImages[Math.floor(Math.random()*remainingImages.length)];
     console.log(currentImage);
 
-    // Show the image in html, show empty text input field
+    // Show the image in html
     gameImage.src = currentImage.src;
-    gameInput.value = "";
 
     // Show an empty text input field and GO button
 	  gameInput.style.display = "inline";
-	  gameBtn.style.display = "inline";
-    nextBtn.style.display = "inline";
+    gameInput.value = "";
+	  
+    // Add event listener to the GO button
+	  gameBtn.addEventListener("click", checkAnswer);
+
 
 	// // Hide the message and NEXT button
 	//   gameMessage.style.display = "none";
@@ -67,13 +70,60 @@ function startGame() {
 	// // Hide the score and reset it to 0
 	//   score.style.display = "none";
 	//   userScore = 0;
-	
-	// // Add event listener to the GO button
-	// gameBtn.addEventListener("click", checkAnswer);
 
 }
 
+// Function to check user answer
+function checkAnswer() {
+    gameBtn.style.display = "none";
+    // Get the user's answer from the input field
+	  currentAnswer = gameInput.value.toLowerCase();
+    console.log(currentAnswer);
+    console.log(currentImage.name);
+      // Check if the answer is correct
+      if (currentAnswer == currentImage.name) {
+        // Display congrats message
+        gameMessage.style.color = "green";
+        gameMessage.innerHTML = "Correct, well done!";
 
+        // Increase the user's score and display new score
+        userScore = userScore + 1;
+        console.log(userScore);
+        userScore.innerHTML = userScore;
+
+            
+
+        // Remove the current image from the remaining images array
+		    remainingImages = remainingImages.filter(function(image) {
+			  return image !== currentImage;
+		    });
+		
+		    // If there are no more images, display a message and a new game button
+        if (remainingImages.length === 0) {
+          gameMessage.innerHTML += " You completed the game!";
+          nextBtn.innerHTML = "NEW GAME";
+          nextBtn.removeEventListener("click", nextImage);
+          nextBtn.addEventListener("click", startGame);
+        } else {
+          // Otherwise, show the NEXT button and add event listener
+          nextBtn.style.display = "inline";
+          nextBtn.addEventListener("click", nextImage);
+        }
+        } else {
+          // Display an incorrect message and show the NEXT button
+          gameMessage.style.color = "red";
+          gameMessage.innerHTML = "Incorrect";
+          nextBtn.style.display = "inline";
+          nextBtn.addEventListener("click", nextImage);
+        }
+	
+	// Disable the input field and GO button
+	gameInput.disabled = true;
+	gameBtn.disabled = true;
+
+
+
+}
 
 // Pick a random image object from the remaining images
 
@@ -100,7 +150,7 @@ function startGame() {
 
 
 
-// Function to check user answer
+
 
     // Get the user's answer from the input field
 
