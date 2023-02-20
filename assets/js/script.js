@@ -34,7 +34,6 @@ let startBtn = document.getElementById("start-btn");
 // Game status at the start, score is zero, full set of 20 images available, no image is shown to user
 let remainingImages = [...images];   /* Copy the images in the original array into a new array called remaining images */
 let currentImage = {};
-// let score = 0;
 startBtn.style.display = "block";
 gameBtn.style.display = "none";
 nextBtn.style.display = "none";
@@ -47,9 +46,10 @@ function startGame() {
     // When game starts, hide start button, show game area
     startBtn.style.display = "none";
     gameBtn.style.display = "inline";
+    userScore = 0;
   
     // calculate how many images left in the array using length, then pick a random image from the remaining game images
-    currentImage = remainingImages[Math.floor(Math.random()*remainingImages.length)];
+    currentImage = remainingImages[Math.floor(Math.random() * remainingImages.length)];
     console.log(currentImage);
 
     // Show the image in html
@@ -65,11 +65,11 @@ function startGame() {
 
 	// // Hide the message and NEXT button
 	//   gameMessage.style.display = "none";
-	//   nextBtn.style.display = "none";
+	
 	
 	// // Hide the score and reset it to 0
 	//   score.style.display = "none";
-	//   userScore = 0;
+
 
 }
 
@@ -91,41 +91,58 @@ function checkAnswer() {
         console.log(userScore);
         userScore.innerHTML = userScore;
 
-            
-
         // Remove the current image from the remaining images array
 		    remainingImages = remainingImages.filter(function(image) {
 			  return image !== currentImage;
 		    });
 		
-		    // If there are no more images, display a message and a new game button
-        if (remainingImages.length === 0) {
-          gameMessage.innerHTML += " You completed the game!";
-          nextBtn.innerHTML = "NEW GAME";
-          nextBtn.removeEventListener("click", nextImage);
-          nextBtn.addEventListener("click", startGame);
-        } else {
-          // Otherwise, show the NEXT button and add event listener
-          nextBtn.style.display = "inline";
-          nextBtn.addEventListener("click", nextImage);
-        }
+              // // If there are no more images, display a message and a new game button to start a new game
+              // if (remainingImages.length === 0) {
+              //   gameMessage.innerHTML += " You completed the game!";
+              //   nextBtn.innerHTML = "NEW GAME";
+              //   nextBtn.removeEventListener("click", nextImage);
+              //   nextBtn.addEventListener("click", startGame);
+              // } else {
+              //   // Otherwise, show the NEXT button and add event listener
+              //   gameBtn.style.display = "inline";
+              //   nextBtn.style.display = "inline";
+              //   nextBtn.addEventListener("click", nextImage);
+              // }
         } else {
           // Display an incorrect message and show the NEXT button
           gameMessage.style.color = "red";
-          gameMessage.innerHTML = "Incorrect";
+          gameMessage.innerHTML = "Sorry, that's incorrect";
           nextBtn.style.display = "inline";
           nextBtn.addEventListener("click", nextImage);
         }
 	
 	// Disable the input field and GO button
-	gameInput.disabled = true;
-	gameBtn.disabled = true;
-
-
+	// gameInput.disabled = true;
+	// gameBtn.disabled = true;
 
 }
 
-// Pick a random image object from the remaining images
+// Function to show the next image
+function nextImage() {
+    // Pick a random image object from the remaining images
+    currentImage = remainingImages[Math.floor(Math.random() * remainingImages.length)];
+    console.log(currentImage);
+
+    // Show the image in html
+    gameImage.src = currentImage.src;
+
+    // Show an empty text input field and GO button
+    gameBtn.style.display = "inline";
+	  gameInput.style.display = "inline";
+    gameInput.value = "";
+	  
+    // Add event listener to the GO button
+	  gameBtn.addEventListener("click", checkAnswer);
+
+}
+
+
+
 
 
 
@@ -175,7 +192,7 @@ function checkAnswer() {
 
 
 
-  // Function to show the next image
+  
 
 
 
