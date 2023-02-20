@@ -14,27 +14,33 @@ const images = [
 ];
 
 // DOM commands to call HTML elements
+const gameArea = document.getElementById("game-area");
 const gameImage = document.getElementById("game-image");
 const gameInput = document.getElementById("game-input");
 const gameBtn = document.getElementById("game-btn");
 const gameMessage = document.getElementById("game-message");
 const nextBtn = document.getElementById("next-btn");
-const score = document.getElementById("user-score");
+const userScore = document.getElementById("user-score");
 const startBtn = document.getElementById("start-btn");
 
-
-
-
-
-
-
-
-
 // Game status at the start, score is zero, full 20 images available, no image is shown to user
+let userScore = 0;
+let currentImage = {};
+
 
 
 // Function for starting the game 
+function startGame() {
+    // When game starts, hide start button, show game area
+    startBtn.style.display = "none";
 
+    // Pick a random image from the remaining game images
+    currentImage = remainingImages[Math.floor(Math.random()*remainingImages.length)];
+
+    // Show the image in html, show empty text input field
+    gameImage.src = currentImage.src;
+    gameInput.value = "";
+}
 
 
 // Pick a random image object from the remaining images
