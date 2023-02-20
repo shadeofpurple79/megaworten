@@ -14,8 +14,18 @@ const images = [
 ];
 
 // DOM commands to call HTML elements
+ 
+
+const gameImage = document.getElementById()
+const gameInput = document.getElementById()
+const gameBtn = document.getElementById()
+const gameMessage = document.getElementById()
+const nextBtn = document.getElementById()
+const score = document.getElementById()
+const startBtn = document.getElementById()
+
+"game-image"
 "game-input"
-"game-input" 
 "game-btn"
 "game-message"
 "next-btn"
