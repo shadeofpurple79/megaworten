@@ -48,6 +48,7 @@ function startGame() {
     startBtn.style.display = "none";
     gameBtn.style.display = "inline";
     currentScore = 0;
+    remainingImages = [...images];
   
     // calculate how many images left in the array using length, then pick a random image from the remaining game images
     currentImage = remainingImages[Math.floor(Math.random() * remainingImages.length)];
