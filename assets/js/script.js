@@ -34,6 +34,7 @@ let startBtn = document.getElementById("start-btn");
 // Game status at the start, score is zero, full set of 20 images available, no image is shown to user
 let remainingImages = [...images];   /* Copy the images in the original array into a new array called remaining images */
 let currentImage = {};
+let currentScore = 0;
 startBtn.style.display = "block";
 gameBtn.style.display = "none";
 nextBtn.style.display = "none";
@@ -46,7 +47,7 @@ function startGame() {
     // When game starts, hide start button, show game area
     startBtn.style.display = "none";
     gameBtn.style.display = "inline";
-    userScore = 0;
+    currentScore = 0;
   
     // calculate how many images left in the array using length, then pick a random image from the remaining game images
     currentImage = remainingImages[Math.floor(Math.random() * remainingImages.length)];
@@ -78,9 +79,9 @@ function checkAnswer() {
         gameMessage.innerHTML = "Correct, well done!";
 
         // Increase the user's score and display new score
-        userScore = userScore + 1;
-        console.log(userScore);
-        userScore.innerText = userScore;   /* BAAAAAAAAAAAHHHHHHHH   */
+        currentScore = currentScore + 1;
+        console.log(currentScore);
+        userScore.innerText = currentScore;   
 
         // Remove the current image from the remaining images array
 		    remainingImages = remainingImages.filter(function(image) {
