@@ -9,124 +9,55 @@
     <link rel="icon" type="image/x-icon" href="/assets/images/apple.png">
 </head>
 <body>
-    <h1>Mega Worten</h1>
-    <h3>Improve your German vocabulary and spelling</h3>
-    <div id = "game-area">
-        <img id="game-image" src="" alt="Game Image">
-        <br>
-        <label for="game-input">Type the German word for the image you see:</label>
-        <!-- input field for user to type their answer: -->
-        <input type="text" id="game-input" name="game-input"> 
-        <!-- GO button, user will enter their answer and type go, but invisible at the start of the game -->
-        <button id="game-btn">GO</button>
-        <!--game message to be displayed according to correct or incorrect answer  -->
-        <p id="game-message"></p>
-        <!-- user clicks NEXT button after a correct or incorrect answer, to show the next image  -->
-        <button id="next-btn">NEXT</button>
-        <!-- score is zero at the start of the game -->
-        <p>Score: <span id="user-score">0</span></p>
-        <!-- button to start the game -->
-        <button id="start-btn">START GAME</button>
-        <!-- user clicks NEW GAME button to start a new game  -->
-        <button id="new-btn">NEW GAME</button>
-    </div>
-   
-   
-   
-    <!-- create a vertical grid of 5 rows - mobile view -->
-    <!-- <div class="container"> -->
+    <!-- create a vertical grid of 4 rows - mobile view  -->
+    <div id="container"> 
 
-        <!-- first row of grid - header: logo, strapline, link to game rules new page -->
-        <!-- <div class="game-header">
+        <!-- first row of grid - header: logo, strapline, link to game rules new page  -->
+        <div id="game-header">
             <h1>Mega Worten</h1>
             <h2><a href="/index.html">Home</a></h2>
             <h2><a href="#game-rules">Game Rules</a></h2>
             <h3>Improve your German vocabulary and spelling</h3>
-        </div> -->
-
-<!-- 
-        <div class="game-controls">
-            <h2>Game Controls</h2>
-           
-
         </div>
- -->
 
-        <!-- second row of grid - game controls: select game category, show timer, play button to start game, reset button to stop game, show score -->
-        <!-- show a dropdown to select one of two options when page is loaded or reset button is clicked -->
-        <!-- when a game category selection is made, show play button -->
-        <!-- <div class="game-controls"> -->
-            <!-- <h2>Game Controls</h2> -->
-            <!-- <p id="player-message"> Select a game category and click PLAY button</p>
-            <span><button id = "fruits-btn" onclick = "categoryFruits()">FRUITS</button></span>
-            <span><button id = "animals-btn" onclick = "categoryAnimals()">ANIMALS</button></span>
-            <span><button id = "play-btn" onclick = "startGame()">PLAY</button></span>
-            <span><button id = "reset-btn" onclick = "restartGame()">RESET</button></span> -->
+        <!-- second row of grid - main game: split into 2 areas, for game question and game answer, and score. -->
+         <div id = "game-area">
+            <img id="game-image" src="" alt="Game Image">
+            <br>
+            <!--game message to be displayed according to correct or incorrect answer  -->
+            <p id="game-message"></p>
+            <br>
+            <!-- user clicks NEXT button after a correct or incorrect answer, to show the next image  -->
+            <button id="next-btn">NEXT</button>
+            <br>
+            <!-- score is zero at the start of the game -->
+            <label for="game-input">Type the German word for the image you see:</label>
+            <!-- input field for user to type their answer: -->
+            <input type="text" id="game-input" name="game-input"> 
+            <!-- GO button, user will enter their answer and type go, but invisible at the start of the game -->
+            <button id="game-btn">GO</button>
+            <p>Score: <span id="user-score">0</span></p>
+            <!-- button to start the game -->
+            <button id="start-btn">START GAME</button>
+            <!-- user clicks NEW GAME button to start a new game  -->
+            <button id="new-btn">NEW GAME</button>
+        </div>
 
-        <!-- </div>  -->
-
-
-        
-
-        <!-- third row of grid - main game: split into 2 vertical areas. -->
-            <!-- on the left: show fruit or animal images. number of images left in game  -->
-            <!-- on the right: input field for player to type answer. current score. option to reset game.  -->
-        <!-- <div class="game-cards">
-            <h2>Game Cards</h2>
-            <p>Question Card:</p>
-            <div id="imageContainer"></div>
-            <div id="imageName"></div> -->
-           <!-- 
-            <img id="game-words" src="assets/images/spacer.png" width="100" height="100" alt="blank image"> -->
-        <!-- </div>
-        <div class="game-answers">
-            <h2>Game Answers</h2>
-            <button id="generateButton">Get New Word</button>
-            <label for="inputName">Was ist das in Deutsche?</label>
-            <input type="text" id="inputName">
-            <button id="checkButton">Send Answer</button>
-            <div id="result"></div> -->
-
-
-
-
-
-
-            <!-- text input field for player to type in the answer -->
-            <!-- press enter to submit answer, no submit button to play the game faster -->
-            <!-- if answer is correct, increase score by 1 -->
-            <!-- button to stop the game, reset the score and start the game again -->
-            <!-- <form id="player-answers">
-                <label id="player-input">Was ist das?</label>
-                <input type="text" id="player-answer" placeholder="type here">
-                <button id = "answer-btn" type="submit" onclick="getAnswer()">SEND</button>
-            </form> -->
-        <!-- </div> -->
-       
-        <!-- fourth row of grid - game rules anchor link  -->
-       <!-- 
+        <!-- third row of grid - game rules anchor link  --> 
         <div id="game-rules">
-            <h2>Game Rules</h2>
-            <ul>
-                <li>You have 60 seconds to complete the game.</li>
-                <li>When you see the picture, type in the German word including the article.</li>
-                <li>Words are not case sensitive. </li>
-                <li>If you answer incorrectly, the same picture will come up again randomly.</li>
-                <li>If you answer correctly, the same picture will not come up during the same game. </li>
-                <li></li>
-            </ul>
+            <h2>Game Rules - How to play</h2>
         </div>
-         -->
 
-         <!-- fifth row of grid - footer: like this game? thumbs up or down, vote count, share on insta  --> 
-        <!-- <div class="footer-social">Footer Social<br>
-            <h2>Like this game?</h2>
-            thumbs up or down<br>
-            vote count<br>
-            share on insta<br>
-        </div> -->
-        
-    <!-- </div> -->
+        <!-- fourth row of grid - footer: like this game? thumbs up or down, vote count, share on insta  --> 
+        <div id="footer-social">
+            <h2>Like This Game?</h2><br>
+            <h3>Share</h3>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="SShare the game on Instagram (icon opens in a new tab)"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+      
     <script src="assets/js/script.js"></script>
+    <!-- font awesome script, use v5, free icons  -->
+    <script src="https://kit.fontawesome.com/96530399f9.js" crossorigin="anonymous"></script>
 </body>
 </html>
