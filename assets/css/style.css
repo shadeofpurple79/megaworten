@@ -4,80 +4,80 @@
 /* grid structure styling */
 
 body {
-  background-color: turquoise;
-  font-family: "roboto condensed", sans-serif;
-  font-weight: 300;
-  color: #2f4f4f;
+background-color: turquoise;
+font-family: "roboto condensed", sans-serif;
+font-weight: 300;
+color: #2f4f4f;
 }
 
-h1 h2 {
-  font-family: roboto, sans-serif;
-  font-weight: 300;
-  color: #2f4f4f;
-  text-transform: capitalize;
-  letter-spacing: 3px;
+h1 {
+font-family: roboto, sans-serif;
+font-weight: 200;
+color: #2f4f4f;
+text-transform: capitalize;
+letter-spacing: 3px;
 }
 
 h2 {
-  text-align: left;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 100%;
+text-align: left;
+padding-top: 3px;
+padding-bottom: 3px;
+font-size: 100%;
 }
 
 h3 {
-  text-align: left;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 100%;
+text-align: left;
+padding-top: 3px;
+padding-bottom: 3px;
+font-size: 100%;
 }
 
 p {
-  font-family: roboto, sans-serif;
-  padding: 10px;
-  line-height: 30px;
+font-family: roboto, sans-serif;
+padding: 10px;
+line-height: 30px;
 }
 
 img {
-  max-width: 100%;
+max-width: 100%;
 }
 
 #container {
-    display: grid;
-    /* grid-template-columns: 50% 50%; */
-    grid-template-rows: 300px 400px 200px 200px;
-    grid-gap: 10px 10px;
-    padding: 10px;
-  }
-  #game-header {
-    background: whitesmoke;
-    grid-row: 1; 
-    padding: 10px;
-  }
+  display: grid;
+  /* grid-template-columns: 50% 50%; */
+  grid-template-rows: 200px 550px 150px 100px;
+  grid-gap: 10px 10px;
+  padding: 10px;
+}
+#game-header {
+  background: whitesmoke;
+  grid-row: 1; 
+  padding: 10px;
+}
 
-  #game-area {
-    background: whitesmoke;
-    grid-row: 2; 
-    padding: 10px;
-    /* width: 400px;
-    height: 600px; */
-  }
+#game-area {
+  background: whitesmoke;
+  grid-row: 2; 
+  padding: 10px;
+  /* width: 400px;
+  height: 600px; */
+}
 
-  #game-rules {
-    background: whitesmoke;
-    grid-row: 3; 
-    padding: 10px;
-  }
+#game-rules {
+  background: whitesmoke;
+  grid-row: 3; 
+  padding: 5px;
+}
 
-  #footer-social {
-    background: whitesmoke;
-    grid-row: 4; 
-    padding: 10px;
-  }
+#footer-social {
+  background: whitesmoke;
+  grid-row: 4; 
+  padding: 5px;
+}
 
 #game-image {
-  /* width: 300px;
-  height: 300px; */
+/* width: 300px;
+height: 300px; */
 }
 
 #game-input {}
@@ -97,7 +97,13 @@ img {
 
 
 
-  /* tablet view */
+/* tablet view */
+@media screen and (min-width: 600px) {
+
+}
 
 
-  /* desktop view */
+/* desktop view */
+@media screen and (min-width: 1000px) {
+
+}
