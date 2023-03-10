@@ -1,3 +1,5 @@
+/* jshint esverion: 11 */
+
 // Create an array of 20 image objects with names in German
 const images = [
 {name: "der apfel", src: "assets/images/apple.png"},
@@ -58,7 +60,6 @@ function startGame() {
 
   // calculate how many images left in the array using length, then pick a random image from the remaining game images
   currentImage = remainingImages[Math.floor(Math.random() * remainingImages.length)];
-  console.log(currentImage);
 
   // Show the image in html
   gameImage.src = currentImage.src;
@@ -76,18 +77,16 @@ function checkAnswer() {
   gameBtn.style.display = "none"; /* hide GO button */
   // Get the user's answer from the input field
   let currentAnswer = gameInput.value.toLowerCase();
-  console.log(currentAnswer);
-  console.log(currentImage.name);
+  
     
     // Check if the answer is correct
     if (currentAnswer == currentImage.name) {
       // Display congrats message
       gameMessage.style.color = "green";
-      gameMessage.innerHTML = "Correct, well done!";
+      gameMessage.innerHTML = "✅ Correct, well done!";
 
       // Increase the user's score and display new score
       currentScore = currentScore + 1;
-      console.log(currentScore);
       userScore.innerText = currentScore;   
 
       // Remove the current image from the remaining images array
@@ -99,7 +98,7 @@ function checkAnswer() {
             if (remainingImages.length === 0) {
               gameMessage.style.color = "purple";
               gameMessage.style.backgroundColor = "white";
-              gameMessage.innerHTML = "CONGRATS, YOU COMPLETED THE GAME!";
+              gameMessage.innerHTML = "🔥 CONGRATS, YOU COMPLETED THE GAME!";
               nextBtn.style.display = "none";
               newBtn.style.display = "block";
               newBtn.addEventListener("click", startGame);
@@ -111,7 +110,7 @@ function checkAnswer() {
       } else {
         // Display an incorrect message and show the NEXT button
         gameMessage.style.color = "red";
-        gameMessage.innerHTML = "Sorry, that's incorrect";
+        gameMessage.innerHTML = "❌ Sorry, that's incorrect";
         nextBtn.style.display = "inline";
         nextBtn.addEventListener("click", nextImage);
       }
@@ -121,7 +120,6 @@ function checkAnswer() {
 function nextImage() {
   // Pick a random image object from the remaining images
   currentImage = remainingImages[Math.floor(Math.random() * remainingImages.length)];
-  console.log(currentImage);
 
   // Show the image in html
   gameImage.src = currentImage.src;

@@ -14,14 +14,25 @@
 
     <!-- first row of grid - header: logo, strapline, link to game rules new page  -->
     <div id="game-header">
-        <h1>Mega Worten</h1>
-        <h2><a href="index.html">Home</a>    <a href="#game-rules">Game Rules</a></h2>
-        <h3>Improve your German vocabulary and spelling</h3>
+        <img src="assets/images/logo.png" alt="Mega Worten">
+        <h2>Improve your German vocabulary and spelling with MegaWorten</h2>
     </div>
 
-    <!-- second row of grid - main game: split into 2 areas, for game question and game answer, and score. -->
+    <!-- second row of grid - game rules  --> 
+    <div id="game-rules">
+        <h2>Game Rules - How to Play</h2>
+        <ul>
+            <li>Click START GAME</li>
+            <li>Type in the German word for the picture you see and click GO</li>
+            <li><i class="fas fa-exclamation-triangle"></i> IMPORTANT! you must also enter the noun gender of the word, such as das, der, die </li>
+            <li>Click NEXT to see the next image</li>
+            <li>Continue until you answer all pictures correctly</li>
+        </ul>
+    </div>
+
+    <!-- third row of grid - main game: split into 2 areas, for game question and game answer, and score. -->
         <div id = "game-area">
-        <img id="game-image" src="" alt="Game Image">
+        <img id="game-image" src="assets/images/MegaWorten-logo.gif" alt="Game Image">
         <br><br>
         <!-- button to start the game -->
         <button id="start-btn">START GAME</button>
@@ -42,27 +53,14 @@
         <button id="new-btn">NEW GAME</button>
     </div>
 
-    <!-- third row of grid - game rules anchor link  --> 
-    <div id="game-rules">
-        <h2>Game Rules - How to Play</h2>
-        <ul>
-            <li>Click START GAME</li>
-            <li>Type in the German word for the picture you see and click GO</li>
-            <li>Click NEXT to see the next image</li>
-            <li>Continue until you answer all pictures correctly</li>
-        </ul>
-    </div>
-
     <!-- fourth row of grid - footer: like this game? thumbs up or down, vote count, share on insta  --> 
     <div id="footer-social">
-        <h2>Like This Game?</h2>
-        <h2>Share on <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Share the game on Instagram (icon opens in a new tab)"><i class="fab fa-instagram"></i></a> </h2>
+        <h2>Like This Game? Share on <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Share the game on Instagram (icon opens in a new tab)"><i class="fab fa-instagram"></i></a> </h2>
     </div>
 </div>
 
 <!-- font awesome script, use v5, free icons  -->
 <script src="https://kit.fontawesome.com/96530399f9.js" crossorigin="anonymous"></script>
-    
 <script src="assets/js/script.js"></script>
 
 </body>
