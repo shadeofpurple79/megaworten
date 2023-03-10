@@ -75,7 +75,7 @@ function startGame() {
 function checkAnswer() {
   gameBtn.style.display = "none"; /* hide GO button */
   // Get the user's answer from the input field
-  currentAnswer = gameInput.value.toLowerCase();
+  let currentAnswer = gameInput.value.toLowerCase();
   console.log(currentAnswer);
   console.log(currentImage.name);
     
@@ -98,7 +98,7 @@ function checkAnswer() {
             // If there are no more images, display a message, end the game, and show button to start a new game
             if (remainingImages.length === 0) {
               gameMessage.style.color = "purple";
-              gameMessage.style.backgroundColor = "white"
+              gameMessage.style.backgroundColor = "white";
               gameMessage.innerHTML = "CONGRATS, YOU COMPLETED THE GAME!";
               nextBtn.style.display = "none";
               newBtn.style.display = "block";
