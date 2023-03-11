@@ -65,12 +65,12 @@ max-width: 100%;
   padding: 10px;
 }
 
-#game-rules {
+/* #game-rules {
   background: whitesmoke;
   grid-row: 2; 
   padding: 5px;
   padding-right: 25px;
-}
+} */
 
 /* styling all types of buttons in the game and page */
 button, .button, input[type="button"], input[type="submit"] {
@@ -136,13 +136,8 @@ button, .button, input[type="button"], input[type="submit"] {
 
 #game-input {}
 
-#game-btn {}
-
 #game-message {}
 
-#next-btn {}
-
-#score {}
 
 #user-score {
   margin: 10px;
@@ -156,11 +151,9 @@ button, .button, input[type="button"], input[type="submit"] {
   letter-spacing: 3px;
 }
 
-
-#start-btn {}
-
-
-
+.hide {
+  display: none;
+}
 
 /* tablet view */
 @media screen and (min-width: 600px) {
@@ -169,7 +162,6 @@ button, .button, input[type="button"], input[type="submit"] {
     align-items: center;
   }
 }
-
 
 /* desktop view */
 @media screen and (min-width: 1000px) {

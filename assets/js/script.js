@@ -19,8 +19,8 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    }
   }
-}
 
 // Create an array of 20 image objects with names in German
 const images = [
