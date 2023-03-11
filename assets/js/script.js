@@ -1,4 +1,4 @@
-/* jshint esverion: 11 */
+/* jshint esversion: 11 */
 
 // Game rules open/close modal 
 // Get the modal
@@ -10,17 +10,17 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
-}
+};
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
-}
+};
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
     }
-  }
+  };
 
 // Create an array of 20 image objects with names in German
 const images = [
@@ -46,7 +46,7 @@ const images = [
 ];
 
 // DOM commands to call HTML elements
-let gameArea = document.getElementById("game-area");
+// let gameArea = document.getElementById("game-area");
 let gameImage = document.getElementById("game-image");
 let gameInput = document.getElementById("game-input");
 let gameBtn = document.getElementById("game-btn");
