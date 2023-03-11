@@ -12,145 +12,55 @@ Mega Worten
 
 ![Responsive Views](documentation/images/megaworten-highlevel.png)
 
-
-
-
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://shadeofpurple79.github.io/megaworten
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
-
-![screenshot](documentation/mockup.png)
-
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ## UX
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+Mega Worten game is based on a minimalistic flow. The player follows these basic steps:
+- Start the game
+- See an image, enter the German word
+- If it's correct, earn more points
+- Move to the next image and continue until there are no more images left in the game
 
-In this section, you will briefly explain your design processes.
+Game Flow
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+![Game Flow](documentation/images/megaworten-gameflow.png)
 
 ### Colour Scheme
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+Mega Worten's colour scheme is based on a minimalistic and calming theme. The blue colour and its different shades such as turquoise, aquamarine and so on are associared with feelings of calmness and relaxation and is often described as peaceful, tranquil, secure, and orderly. Blue is seen as a sign of stability and reliability.
 
-Explain your colours and the colour scheme.
+Mega Worten has used this colour scheme even though it is a game but its main purpose is educational and requires the mind to be open to learning, as opposed to the more stressful sensation in competitive gaming. 
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- `#turquoise`  used for background colour
+- `#whitesmoke` used for game area background
+- `#2f4f4f`     used for H1 text
+- `#1ab5db`     used for button background
+- `#aquamarine` used for displayed score
 
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
+Colour Scheme
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+I used [coolors.co](https://coolors.co/40e0d0-f5f5f5-2f4f4f-1ab5db-7fffd4) to generate my colour palette.
 
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
-
-![screenshot](documentation/coolors.png)
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
+![Colour Scheme](documentation/images/colour-scheme.png)
 
 ### Typography
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+- [Google Pairing](https://www.fontpair.co/pairings/roboto-condensed-roboto) suggestion was used to pair Roboto and Roboto Condensed fonts 
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
+- [Roboto Condensed](https://fonts.google.com/specimen/Roboto+Condensed) was used for the primary headers and titles.
 
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
+- [Roboto](https://fonts.google.com/specimen/Roboto) was used for all other secondary text.
 
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
-
-## User Stories
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, list all of your user stories for the project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-### New Site Users
-
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-
-### Returning Site Users
-
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-
-### Site Admin
-
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- [Font Awesome](https://fontawesome.com) icons were used in the game, when displaying game messages and important game rules, as well as social media icons in the footer. 
 
 ## Wireframes
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
-In this section, display your wireframe screenshots using a Markdown `table`.
+wireframe screenshots using a Markdown `table`.
 
 Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+[Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
 ### Home Page Wireframes
 
@@ -175,12 +85,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
 | Tablet | ![screenshot](documentation/wireframes/tablet-contact.png) |
 | Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Repeat for any addition wireframe pages you have.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## Features
 
@@ -229,72 +133,36 @@ Hint: the more, the merrier!
 
 ### Future Features
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Cool new feature #1
-    - Any additional notes about this feature.
-- Cool new feature #2
-    - Any additional notes about this feature.
-- Cool new feature #3
-    - Any additional notes about this feature.
+- Game Timer
+    -  
+- Game Levels and Rewards
+    - 
+- Additional Game Arrays 
+    - that can be unlocked with each new level (days, months, foods, drinks, transport vehicles, colours, clothes, body, nature, and many more)
+- Login and Save Scores
+    - 
+- Challenges with decreasing time limit
+    - 
+- Play Live Against Real People
+    - 
+- Artificial intelligence and learning capability to follow trending popular culture topics and create word categories using the most frequently used words (perhaps using chatGPT)
+    - 
 
 ## Tools & Technologies Used
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
-- [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
-- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) and/or [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
-- [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Materialize](https://materializecss.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
+- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
-- [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
 - [Markdown Builder by Tim Nelson](https://traveltimn.github.io/markdown-builder) used to help generate the Markdown files.
-- [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
-- [Django](https://www.djangoproject.com) used as the Python framework for the site.
-- [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [SQLAlchemy](https://www.sqlalchemy.org) used as the relational database management with Flask.
-- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
-- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
-- [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
-- [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
-
-## Testing
-
-For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 # Testing
-
-Return back to the [README.md](README.md) file.
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, you need to convince the assessors that you have conducted enough testing to legitimately believe that the site works well.
-Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended,
-with the project providing an easy and straightforward way for the users to achieve their goals.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## Code Validation
 
