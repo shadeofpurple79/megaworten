@@ -200,25 +200,12 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 ## Lighthouse Audit
 
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. The initial audit report shows a few errors which have been fixed (meta description was missing, images didn't have a max width or height, there wasn't enough contrast in the colours used)
 
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Mobile | ![screenshot](documentation/lighthouse-home-mobile.png) | Some minor warnings |
-| Home | Desktop | ![screenshot](documentation/lighthouse-home-desktop.png) | Few warnings |
-| About | Mobile | ![screenshot](documentation/lighthouse-about-mobile.png) | Some minor warnings |
-| About | Desktop | ![screenshot](documentation/lighthouse-about-desktop.png) | Few warnings |
-| Gallery | Mobile | ![screenshot](documentation/lighthouse-gallery-mobile.png) | Slow response time due to large images |
-| Gallery | Desktop | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
-
+| Home | Mobile | ![screenshot](documentation/images/lighthouse-viewer-2023-03-12-mobile.png) | Minor warnings have been fixed  |
+| Home | Desktop | ![screenshot](documentation/images/lighthouse-viewer-2023-03-12-desktop.png) | Minor warnings have been fixed |
 
 ## Bugs
 
@@ -235,29 +222,23 @@ screenshots of bugs are extremely helpful, and go a long way!
 
     - To fix this, I _____________________.
 
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
+Bugs that have been fixed:
 
-    ![screenshot](documentation/bug02.png)
+- Game play buttons (Go, Next, Next Game) were visible before the game was started by the player. 
+- Game images array was not restoring to the original array when a new game was started. 
+- Player score was not displayed. Requested tutor assistance. I fixed it by creating a variable to keep track of the number and another that is assigned a DOM selector.
+- Player score was not resetting to zero when a new game started. 
+- GO button was still visible even after player submitted an answer. 
+    - Made made GO button appear when answering is allowed, and disappear when not allowed. 
+- Game message (correct or incorrect answer) remained visible after the player clicked Next button to view the next game image. 
+- Previous game message (correct or incorrect answer) was still displayed after the player started a new game.
 
-    - To fix this, I _____________________.
 
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
 
-    ![screenshot](documentation/bug03.png)
+Unfixed bugs:
 
-    - To fix this, I _____________________.
+When a second and subsequent new game is started, a white bank remains visible where the previous game messages would have been. 
 
-- Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
-
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
-
-- Python `E501 line too long` (93 > 79 characters)
-
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
 
 ### GitHub **Issues**
 
