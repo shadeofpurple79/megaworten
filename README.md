@@ -54,140 +54,63 @@ I used [coolors.co](https://coolors.co/40e0d0-f5f5f5-2f4f4f-1ab5db-7fffd4) to ge
 
 ## Wireframes
 
-
-wireframe screenshots using a Markdown `table`.
-
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-[Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
-
-### Home Page Wireframes
+I used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-home.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-home.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-home.png) |
-
-### About Page Wireframes
-
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-about.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-about.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-about.png) |
-
-### Contact Page Wireframes
-
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-contact.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
+| Mobile | ![screenshot](documentation/images/megaworten-wireframe-mobile.png) |
+| Tablet | ![screenshot](documentation/images/megaworten-wireframe-tablet.png) |
+| Desktop | ![screenshot](documentation/images/megaworten-wireframe-desktop.png) |
 
 ## Features
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
 IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### Existing Features
 
 - **Feature #1**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature01.png)
+    - Show a random picture from the array of 20 pictures. Next to the picture, show a text input field and a "GO" button for the user. Wait for the user input. 
+    - ![screenshot](documentation/feature01.png)
 
 - **Feature #2**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature02.png)
+    - User sees the picture, enters the word for the picture in the input field, and clicks the GO button. When GO button is clicked, check if the word entered by the user is the same as the word assigned to the image. If it's the same, then user answer is correct. If it's not, then user answer is wrong.
+    - ![screenshot](documentation/feature01.png)
 
 - **Feature #3**
+    - User score is zero at the start. For correct answers: increase score by one
+    - ![screenshot](documentation/feature01.png)
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+- **Feature #4**
+    - When user clicks the NEXT button, display a new random image from the array and repeat the same loop from the beginning. When there are no more images left to show: display message to the user "Congrats, you completed the game!" display a button that says "NEW GAME"
+    - ![screenshot](documentation/feature01.png)
 
-![screenshot](documentation/feature03.png)
-
-
-
-Create an array of 20 images, assign a name to each image. 
-User score is zero at the start. 
-
-Show a "START" button that starts the game. 
-
-User clicks the START button.
-
-Show a random picture from the array of 20 pictures. 
-Next to the picture, show a text input field and a "GO" button for the user. 
-Wait for the user input. 
-
-User sees the picture, enters the word for the picture in the input field, and clicks the GObutton. 
-
-When GO button is clicked, check if the word entered by the user is the same as the word assigned to the image. 
-
-If it's the same, then user answer is correct. 
-If it's not, then user answer is wrong.
-
-For correct answers:
-	increase score by one
-	remove that image from the array for the duration of this game
-	display a message to the user saying "correct, well done"
-	display a button that says "NEXT" 
-	
-For incorrect answers:
-	display a message to the user saying "incorrect" 
-	user score remains unchanged
-	display a button that says "NEXT"
-
-When user clicks the NEXT button, display a new random image from the array and repeat the same loop from the beginning. 
-
-When there are no more images left to show:
-	display message to the user "Congrats, you completed the game!" 
-	display a button that says "NEW GAME"
-
-If user clicks the NEW GAME button, reload the full 20 images and restart the game from the beginning. 
-
-
-
-
-
-
+- **Feature #5**
+    - If user clicks the NEW GAME button, reload the full 20 images and restart the game from the beginning. 
+    - ![screenshot](documentation/feature01.png)
 
 ### Future Features
 
-- Game Timer
-    -  
-- Game Levels and Rewards
-    - 
-- Additional Game Arrays 
-    - that can be unlocked with each new level (days, months, seasons, numbers, foods, drinks, transport vehicles, colours, clothes, body, nature, and many more)
-- Login and Save Scores
-    - 
-- Challenges with decreasing time limit
-    - 
-- Play Live Against Real People
-    - 
-- Artificial intelligence and learning capability to follow trending popular culture topics and create word categories using the most frequently used words (perhaps using chatGPT)
-    - 
+- **Future Feature #1**
+    - Game Timer
 
+- **Future Feature #2** 
+    - Game Levels and Rewards
+
+- **Future Feature #3**
+    - Additional Game Arrays  - that can be unlocked with each new level (days, months, seasons, numbers, foods, drinks, transport vehicles, colours, clothes, body, nature, and many more)
+
+- **Future Feature #4**
+    - Login and Save Scores
+ 
+- **Future Feature #5**
+    - Challenges with decreasing time limit
+
+- **Future Feature #6**
+    - Play Live Against Real People
+
+- **Future Feature #7** 
+    - Artificial intelligence and learning capability to follow trending popular culture topics and create word categories using the most frequently used words (perhaps using chatGPT)
+ 
 ## Tools & Technologies Used
-
-
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
@@ -211,7 +134,6 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | --- | --- | --- | --- |
 | index.html | [W3C](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fshadeofpurple79.github.io%2Fmegaworten%2F#l43c86) | ![screenshot](documentation/images/screencapture-validator-w3-org-nu-2023-03-11-16_06_41.png) | Pass: No Errors |
 
-
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
@@ -227,7 +149,6 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | File | Screenshot | Notes |
 | --- | --- | --- |
 | script.js | ![screenshot](documentation/images/screencapture-jshint-2023-03-11-15_49_12.png) | Pass: No Errors |
-
 
 ## Browser Compatibility
 
@@ -252,28 +173,16 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 | Browser | Screenshot | Notes |
 | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browser-chrome.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browser-firefox.png) | Works as expected |
+| Chrome | ![screenshot](documentation/images/chrome.png) | Works as expected |
+| Firefox | ![screenshot](documentation/images/firefox.png) | Works as expected |
+| Safari | ![screenshot](documentation/images/safari.png) | Works as expected |
+
 | Edge | ![screenshot](documentation/browser-edge.png) | Works as expected |
-| Safari | ![screenshot](documentation/browser-safari.png) | Minor CSS differences |
 | Brave | ![screenshot](documentation/browser-brave.png) | Works as expected |
 | Opera | ![screenshot](documentation/browser-opera.png) | Minor differences |
 | Internet Explorer | ![screenshot](documentation/browser-iex.png) | Does not work as expected |
-| x | x | repeat for any other tested browsers |
 
 ## Responsiveness
-
-Use this space to discuss testing the live/deployed site on various device sizes.
-
-The minimum requirement is for the following 3 tests:
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
-
-Using the "amiresponsive" mockup image (or similar) does not suffice the requirements.
-Consider using some of the built-in device sizes in the Developer Tools.
 
 If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
 It showcases a higher level of manual tests, and can be seen as a positive inclusion!
@@ -282,14 +191,12 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsive-xl.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsive-4k.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsive-iphone.png) | Works as expected |
-| x | x | repeat for any other tested sizes |
+| Mobile (DevTools) | ![screenshot](documentation/images/responsive-phone.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/images/responsive-tablet.png) | Works as expected |
+| Desktop | ![screenshot](documentation/images/responsive-desktop.png) | Works as expected |
+| ipad mini | ![screenshot](documentation/images/responsive-desktop.png) | Works as expected |
+| ipad air | ![screenshot](documentation/images/responsive-desktop.png) | Works as expected |
+| iphone 12 pro | ![screenshot](documentation/images/responsive-desktop.png) | Works as expected |
 
 ## Lighthouse Audit
 
