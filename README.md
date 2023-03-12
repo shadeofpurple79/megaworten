@@ -63,52 +63,56 @@ I used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 | Desktop | ![screenshot](documentation/images/megaworten-wireframe-desktop.png) |
 
 ## Features
-IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ### Existing Features
 
 - **Feature #1**
     - Show a random picture from the array of 20 pictures. Next to the picture, show a text input field and a "GO" button for the user. Wait for the user input. 
-    - ![screenshot](documentation/feature01.png)
+    - ![screenshot](documentation/images/feature-1.png)
 
 - **Feature #2**
-    - User sees the picture, enters the word for the picture in the input field, and clicks the GO button. When GO button is clicked, check if the word entered by the user is the same as the word assigned to the image. If it's the same, then user answer is correct. If it's not, then user answer is wrong.
-    - ![screenshot](documentation/feature01.png)
+    - User sees the picture, enters the word for the picture in the input field, and clicks the GO button. 
+    - When GO button is clicked, check if the word entered by the user is the same as the word assigned to the image. 
+    - If it's the same, then user answer is correct. If it's not, then user answer is wrong.
+    - ![screenshot](documentation/images/feature-2a.png)
+    - ![screenshot](documentation/images/feature-2b.png)
 
 - **Feature #3**
-    - User score is zero at the start. For correct answers: increase score by one
-    - ![screenshot](documentation/feature01.png)
+    - User score is zero at the start. For each correct answer, increase score by one.
+    - ![screenshot](documentation/images/feature-3a.png)
+    - ![screenshot](documentation/images/feature-3b.png)
 
 - **Feature #4**
-    - When user clicks the NEXT button, display a new random image from the array and repeat the same loop from the beginning. When there are no more images left to show: display message to the user "Congrats, you completed the game!" display a button that says "NEW GAME"
-    - ![screenshot](documentation/feature01.png)
+    - When user clicks the NEXT button, display a new random image from the array and repeat the same loop from the beginning. 
+    - When there are no more images left to show, display message to the user "Congrats, you completed the game!" and display a button that says "NEW GAME".
+    - ![screenshot](documentation/images/feature-4.png)
 
 - **Feature #5**
     - If user clicks the NEW GAME button, reload the full 20 images and restart the game from the beginning. 
-    - ![screenshot](documentation/feature01.png)
+    - ![screenshot](documentation/images/feature-5.png)
 
 ### Future Features
 
 - **Future Feature #1**
-    - Game Timer
+    - Game Timer - A countdown can be added to limit the time that the player has in order to complete all images. If the player doesn't answer all images in the array within 60 seconds, game would be over. This would add additional excitement to the game. 
 
 - **Future Feature #2** 
-    - Game Levels and Rewards
+    - Game Levels and Rewards - Completing the full image array can earn a reward for the player, such as digital badges and icons. 
 
 - **Future Feature #3**
-    - Additional Game Arrays  - that can be unlocked with each new level (days, months, seasons, numbers, foods, drinks, transport vehicles, colours, clothes, body, nature, and many more)
+    - Additional Game Arrays  - An additional collection of images can be unlocked with each new level (days, months, seasons, numbers, foods, drinks, transport vehicles, colours, clothes, body, nature, and many more). This would increase the vocabulary and the game engagement. 
 
 - **Future Feature #4**
-    - Login and Save Scores
+    - Login and Save Scores - Player can choose to register and login in order to sva their progress and scores, as well as new badges and awards. 
  
 - **Future Feature #5**
-    - Challenges with decreasing time limit
+    - Challenges - New challenges can be introduced to increase the game difficulty. For example, timer can be reduced with each new level and the score to earn could be higher at higher levels. 
 
 - **Future Feature #6**
-    - Play Live Against Real People
+    - Play Live Against Real People - Player can play in a race against other live players. if Player A completes the game before Player B, Player A can earn a bonus score.
 
 - **Future Feature #7** 
-    - Artificial intelligence and learning capability to follow trending popular culture topics and create word categories using the most frequently used words (perhaps using chatGPT)
+    - Artificial Intelligence - New learning capability can be used to follow trending popular culture topics and create word categories using the most frequently used words (perhaps using chatGPT)
  
 ## Tools & Technologies Used
 
@@ -121,6 +125,9 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
 - [Markdown Builder by Tim Nelson](https://traveltimn.github.io/markdown-builder) used to help generate the Markdown files.
+- [Canva](https://www.canva.com) used to design logo, favicon and default image.
+- [Lucid](https://lucid.app) used to create the game flow diagram.
+- [Balsamiq](https://balsamiq.cloud/) used to create wireframes.
 
 # Testing
 
@@ -152,23 +159,6 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 ## Browser Compatibility
 
-Use this space to discuss testing the live/deployed site on various browsers.
-Consider testing at least 3 different browsers, if available on your system.
-
-Recommended browsers to consider:
-- [Chrome](https://www.google.com/chrome)
-- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
-- [Safari](https://support.apple.com/downloads/safari)
-- [Brave](https://brave.com/download)
-- [Opera](https://www.opera.com/download)
-
-**IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
-
-Please note, there are services out there that can test multiple browser compatibilities at the same time.
-Some of these are paid services, but some are free.
-If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results.
-
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
 | Browser | Screenshot | Notes |
@@ -177,15 +167,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Firefox | ![screenshot](documentation/images/firefox.png) | Works as expected |
 | Safari | ![screenshot](documentation/images/safari.png) | Works as expected |
 
-| Edge | ![screenshot](documentation/browser-edge.png) | Works as expected |
-| Brave | ![screenshot](documentation/browser-brave.png) | Works as expected |
-| Opera | ![screenshot](documentation/browser-opera.png) | Minor differences |
-| Internet Explorer | ![screenshot](documentation/browser-iex.png) | Does not work as expected |
-
 ## Responsiveness
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
-It showcases a higher level of manual tests, and can be seen as a positive inclusion!
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
@@ -209,104 +191,28 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Bugs
 
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
-
-For JavaScript and Python applications, it's best to screenshot the errors to include them as well.
-
-screenshots of bugs are extremely helpful, and go a long way!
-
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
-
-    ![screenshot](documentation/bug01.png)
-
-    - To fix this, I _____________________.
+**Fixed Bugs**
 
 Bugs that have been fixed:
 
 - Game play buttons (Go, Next, Next Game) were visible before the game was started by the player. 
+    - To fix this, I implemented if/then loops to make the buttons visible and invisible at the correct times. I used help from a YouTube video called [Learn JavaScript by Building 7 Games - Full Course by Ania Kubów](https://youtu.be/ec8vSKJuZTk) 
 - Game images array was not restoring to the original array when a new game was started. 
-- Player score was not displayed. Requested tutor assistance. I fixed it by creating a variable to keep track of the number and another that is assigned a DOM selector.
+    - To fix this, I asked [ChatGPT](https://chat.openai.com/), I copied the js function from my code into the chatGTP and asked how to make the array to restore to original when a button is clicked. It recommended a line of code which I used. 
+- Player score was not displayed. 
+    - to fix this, I requested tutor assistance. I fixed it by creating a variable to keep track of the number and another that is assigned a DOM selector.
 - Player score was not resetting to zero when a new game started. 
+    - To fix this, I used a line of code and adapted it to my code which fixed the issue. [Stack Overflow](https://stackoverflow.com/questions/69828310/how-to-display-a-number-in-the-dom-using-javascript) 
 - GO button was still visible even after player submitted an answer. 
-    - Made made GO button appear when answering is allowed, and disappear when not allowed. 
+    - To fix this, I made a change to make the GO button appear when answering is allowed, and disappear when not allowed. 
 - Game message (correct or incorrect answer) remained visible after the player clicked Next button to view the next game image. 
+    - To fix this, I made a change to make the game messages disappear when the next button was clicked, using an if/then loop. 
 - Previous game message (correct or incorrect answer) was still displayed after the player started a new game.
-
-
-
-Unfixed bugs:
-
-When a second and subsequent new game is started, a white bank remains visible where the previous game messages would have been. 
-
-
-### GitHub **Issues**
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-An improved way to manage bugs is to use the built-in **Issues** tracker on your GitHub repository.
-To access your Issues, click on the "Issues" tab at the top of your repository.
-Alternatively, use this link: https://github.com/shadeofpurple79/megaworten/issues
-
-If using the Issues tracker for your bug management, you can simplify the documentation process.
-Issues allow you to directly paste screenshots into the issue without having to first save the screenshot locally,
-then uploading into your project.
-
-You can add labels to your issues (`bug`), assign yourself as the owner, and add comments/updates as you progress with fixing the issue(s).
-
-Once you've sorted the issue, you should then "Close" it.
-
-When showcasing your bug tracking for assessment, you can use the following format:
-
-**Fixed Bugs**
-
-All previously closed/fixed bugs can be tracked [here](https://github.com/shadeofpurple79/megaworten/issues?q=is%3Aissue+is%3Aclosed).
-
-| Bug | Status |
-| --- | --- |
-| [JS Uncaught ReferenceError: `foobar` is undefined/not defined](https://github.com/shadeofpurple79/megaworten/issues/1) | Closed |
-| [Python `'ModuleNotFoundError'` when trying to import module from imported package](https://github.com/shadeofpurple79/megaworten/issues/2) | Closed |
-| [Django `TemplateDoesNotExist` at /appname/path appname/template_name.html](https://github.com/shadeofpurple79/megaworten/issues/3) | Closed |
-
-**Open Issues**
-
-Any remaining open issues can be tracked [here](https://github.com/shadeofpurple79/megaworten/issues).
-
-| Bug | Status |
-| --- | --- |
-| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/shadeofpurple79/megaworten/issues/4) | Open |
-| [Python `E501 line too long` (93 > 79 characters)](https://github.com/shadeofpurple79/megaworten/issues/5) | Open |
+    - To fix this, I made the game message to be blank when the function was called to start a new game. 
 
 ## Unfixed Bugs
 
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
-Although time can be a big variable to consider, paucity of time and difficulty understanding
-implementation is not a valid reason to leave bugs unfixed.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
-
-    ![screenshot](documentation/unfixed-bug01.png)
-
-    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
-
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
-
-    ![screenshot](documentation/unfixed-bug02.png)
-
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
-
-- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
-
-    ![screenshot](documentation/unfixed-bug03.png)
-
-    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
-
-If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
+- When a second and subsequent new game is started, a white bank remains visible where the previous game messages would have been. 
 
 There are no remaining bugs that I am aware of.
 
@@ -354,55 +260,38 @@ You can fork this repository by using the following steps:
 
 ## Credits
 
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
+[Learn JavaScript by Building 7 Games - Full Course - by Ania Kubów](https://youtu.be/ec8vSKJuZTk)
+[Learn CSS Grid the easy way](https://youtu.be/rg7Fvvl3taU)
+[Intro to Game Development with JavaScript - Full Tutorial - by FreeCodeCamp.org](https://youtu.be/3EMxBkqC4z0)
+[JavaScript DOM Manipulation – Full Course for Beginners - by FreeCodeCamp.org](https://youtu.be/5fb2aPlgoys)
+[Learn JavaScript Event Listeners In 18 Minutes - by Web Dev Simplified](https://youtu.be/XF1_MlZ5l6M)
+[Best Debugging Tips For Beginners - by Web Dev Simplified](https://youtu.be/gaminoBsQx0)
+[What Is ChatGPT And How Can It Make You A Better Developer - by Web Dev Simplified](https://youtu.be/Gmx-54k3pUk)
+[JavaScript Tutorial & Real JavaScript Projects](https://youtu.be/IyDVvGmzTlo)
+[JavaScript Arrays: Properties, Methods, and Manipulation (Part 1 to 7) - by Corey Schafer](https://youtu.be/8JgU2WmrZXI)
 
 ### Content
 
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
-
-| Source | Location | Notes |
-| --- | --- | --- |
-| [Markdown Builder by Tim Nelson](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
-| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
+[W3 Schools - How to Use Modals](https://www.w3schools.com/howto/howto_css_modals.asp)
+[Learn CSS grid](https://learncssgrid.com/)
+[W3 Schools HTML Meta Tags](https://www.w3schools.com/tags/tag_meta.asp)
+[W3 Schools Round Buttons](https://www.w3schools.com/howto/howto_css_round_buttons.asp)
+[W3 Schools Responsive Images](https://www.w3schools.com/howto/howto_css_image_responsive.asp)
+[W3 Schools Favicon](https://www.w3schools.com/html/html_favicon.asp)
+[W3 Schools DOM elements HTML](https://www.w3schools.com/js/js_htmldom_document.asp)
+[Stack Overflow How to hide a button after click](https://stackoverflow.com/questions/57716269/how-to-hide-a-button-after-click)
+[Stack Overflow How To Display Score](https://stackoverflow.com/questions/30008510/how-to-display-the-users-game-score-on-screen-in-realtime-instead-of-in-an-ale)
+[Stack Overflow Opposite of display:none](https://stackoverflow.com/questions/17630945/is-there-an-opposite-to-displaynone)
+[Stack Overflow Randomise Javascript Array](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+[Stack Overflow Show Random Image From an Array](https://stackoverflow.com/questions/14004318/show-random-image-from-array-in-javascript)
 
 ### Media
 
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+| [Canva](https://youtu.be/8JgU2WmrZXI) | Logo | image | I designed the logo myself using Canva |
+| 
 
 ### Acknowledgements
 
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-- I would like to thank my Code Institute mentor, [John/Jane Doe](https://github.com/username) for their support throughout the development of this project.
-- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my spouse/partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
-
-
+- I would like to thank my Mentor at Code Institute, [Tim Nelson](https://github.com/TravelTimN/2BN-Tim) for going out of his way to help me improve my code and encourabge me that I can do this. 
