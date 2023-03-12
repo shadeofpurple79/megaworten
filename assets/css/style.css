@@ -61,6 +61,11 @@ max-width: 100%;
   text-align: center;
 }
 
+#game-header > img {
+  max-width: 250px;
+  max-height: 150px;
+}
+
 #game-area {
   background: whitesmoke;
   grid-row: 3; 
@@ -76,7 +81,7 @@ max-width: 100%;
 
 /* styling all types of buttons in the game and page */
 button, .button, input[type="button"], input[type="submit"] {
-  background-color: #1ab5db; 
+  background-color: #2f4f4f; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -134,7 +139,11 @@ button, .button, input[type="button"], input[type="submit"] {
 
 #game-image {
   text-align: center;
+  max-width: 500px;
+  max-height: 500px;
 }
+
+
 
 #game-input {}
 
