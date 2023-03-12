@@ -26,23 +26,23 @@ window.onclick = function(event) {
 const images = [
 {name: "der apfel", src: "assets/images/apple.png"},
 {name: "die banana", src: "assets/images/banana.png"},
-// {name: "die zitrone", src: "assets/images/lemon.png"},
-// {name: "die orange", src: "assets/images/orange.png"},
-// {name: "der pfirsich", src: "assets/images/peach.png"},
-// {name: "die birne", src: "assets/images/pear.png"},
-// {name: "die ananas", src: "assets/images/pineapple.png"},
-// {name: "die pflaume", src: "assets/images/plum.png"},
-// {name: "der granatapfel", src: "assets/images/pomegranet.png"},
-// {name: "die erdbeere", src: "assets/images/strawberry.png"},
-// {name: "die wassermelone", src: "assets/images/watermelon.png"},
-// {name:"die katze", src: "assets/images/cat.png"},
-// {name:"der hund", src: "assets/images/dog.png"},
-// {name:"der goldfisch", src: "assets/images/goldfish.png"},
-// {name:"die maus", src: "assets/images/mouse.png"},
-// {name:"der wellensittich", src: "assets/images/parrot.png"},
-// {name:"das kaninchen", src: "assets/images/rabbit.png"},
-// {name:"die schlange", src: "assets/images/snake.png"},
-// {name:"die schildkrote", src: "assets/images/turtle.png"}
+{name: "die zitrone", src: "assets/images/lemon.png"},
+{name: "die orange", src: "assets/images/orange.png"},
+{name: "der pfirsich", src: "assets/images/peach.png"},
+{name: "die birne", src: "assets/images/pear.png"},
+{name: "die ananas", src: "assets/images/pineapple.png"},
+{name: "die pflaume", src: "assets/images/plum.png"},
+{name: "der granatapfel", src: "assets/images/pomegranet.png"},
+{name: "die erdbeere", src: "assets/images/strawberry.png"},
+{name: "die wassermelone", src: "assets/images/watermelon.png"},
+{name:"die katze", src: "assets/images/cat.png"},
+{name:"der hund", src: "assets/images/dog.png"},
+{name:"der goldfisch", src: "assets/images/goldfish.png"},
+{name:"die maus", src: "assets/images/mouse.png"},
+{name:"der wellensittich", src: "assets/images/parrot.png"},
+{name:"das kaninchen", src: "assets/images/rabbit.png"},
+{name:"die schlange", src: "assets/images/snake.png"},
+{name:"die schildkrote", src: "assets/images/turtle.png"}
 ];
 
 // DOM commands to call HTML elements
@@ -105,7 +105,7 @@ function checkAnswer() {
     if (currentAnswer == currentImage.name) {
       // Display congrats message
       gameMessage.style.color = "green";
-      gameMessage.innerHTML = "✅ Correct, well done!";
+      gameMessage.innerHTML = "✅ Correct, well done! Click NEXT";
 
       // Increase the user's score and display new score
       currentScore = currentScore + 1;
@@ -132,7 +132,7 @@ function checkAnswer() {
       } else {
         // Display an incorrect message and show the NEXT button
         gameMessage.style.color = "red";
-        gameMessage.innerHTML = "❌ Sorry, that's incorrect";
+        gameMessage.innerHTML = "❌ Sorry, that's incorrect. Click NEXT";
         nextBtn.style.display = "inline";
         nextBtn.addEventListener("click", nextImage);
       }
