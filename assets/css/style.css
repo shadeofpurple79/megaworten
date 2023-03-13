@@ -4,44 +4,44 @@
 /* grid structure styling */
 
 body {
-background-color: turquoise;
-font-family: "roboto", sans-serif;
-font-weight: 300;
-color: #2f4f4f;
+  background-color: turquoise;
+  font-family: "roboto", sans-serif;
+  font-weight: 300;
+  color: #2f4f4f;
 }
 
 h1 {
-font-family: "roboto condensed", sans-serif;
-font-weight: 200;
-color: #2f4f4f;
-text-transform: capitalize;
-letter-spacing: 3px;
+  font-family: "roboto condensed", sans-serif;
+  font-weight: 200;
+  color: #2f4f4f;
+  text-transform: capitalize;
+  letter-spacing: 3px;
 }
 
 h2 {
-font-family: "roboto condensed", sans-serif;
-text-align: left;
-padding-top: 3px;
-padding-bottom: 3px;
-font-size: 130%;
+  font-family: "roboto condensed", sans-serif;
+  text-align: left;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 130%;
 }
 
 h3 {
-font-family: "roboto condensed", sans-serif;
-text-align: left;
-padding-top: 3px;
-padding-bottom: 3px;
-font-size: 100%;
+  font-family: "roboto condensed", sans-serif;
+  text-align: left;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 100%;
 }
 
 p {
-font-family: roboto, sans-serif;
-padding: 10px;
-line-height: 30px;
+  font-family: roboto, sans-serif;
+  padding: 10px;
+  line-height: 30px;
 }
 
 img {
-max-width: 100%;
+  max-width: 100%;
 }
 
 #container {
@@ -52,7 +52,7 @@ max-width: 100%;
 
 #game-header {
   background: whitesmoke;
-  grid-row: 1; 
+  grid-row: 1;
   padding: 10px;
   text-align: center;
 }
@@ -61,14 +61,14 @@ max-width: 100%;
   text-align: center;
 }
 
-#game-header > img {
+#game-header>img {
   max-width: 250px;
   max-height: 150px;
 }
 
 #game-area {
   background: whitesmoke;
-  grid-row: 3; 
+  grid-row: 3;
   padding: 10px;
 }
 
@@ -80,8 +80,11 @@ max-width: 100%;
 } */
 
 /* styling all types of buttons in the game and page */
-button, .button, input[type="button"], input[type="submit"] {
-  background-color: #2f4f4f; 
+button,
+.button,
+input[type="button"],
+input[type="submit"] {
+  background-color: #2f4f4f;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -94,25 +97,34 @@ button, .button, input[type="button"], input[type="submit"] {
 
 /* game rules modal */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* game rules content box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
+  /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
+  width: 80%;
 }
 
 /* closing the game rules modal */
@@ -132,7 +144,7 @@ button, .button, input[type="button"], input[type="submit"] {
 
 #footer-social {
   background: whitesmoke;
-  grid-row: 4; 
+  grid-row: 4;
   padding: 5px;
   text-align: center;
 }
@@ -153,10 +165,10 @@ button, .button, input[type="button"], input[type="submit"] {
 #user-score {
   margin: 10px;
   border: 3px;
-  border-style:solid;
+  border-style: solid;
   border-color: aquamarine;
   padding: 10px;
-  font-weight: 200; 
+  font-weight: 200;
   font-size: 150%;
   color: #2f4f4f;
   letter-spacing: 3px;
@@ -180,4 +192,4 @@ button, .button, input[type="button"], input[type="submit"] {
     justify-content: center;
     align-items: center;
   }
-  }
+}

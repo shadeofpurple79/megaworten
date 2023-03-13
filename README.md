@@ -260,6 +260,8 @@ You can fork this repository by using the following steps:
 
 ## Credits
 
+I've used a lot of resources to help me understand how Javascript works and how to create a basic simple game:
+
 [Learn JavaScript by Building 7 Games - Full Course - by Ania Kubów](https://youtu.be/ec8vSKJuZTk)
 [Learn CSS Grid the easy way](https://youtu.be/rg7Fvvl3taU)
 [Intro to Game Development with JavaScript - Full Tutorial - by FreeCodeCamp.org](https://youtu.be/3EMxBkqC4z0)
@@ -271,6 +273,8 @@ You can fork this repository by using the following steps:
 [JavaScript Arrays: Properties, Methods, and Manipulation (Part 1 to 7) - by Corey Schafer](https://youtu.be/8JgU2WmrZXI)
 
 ### Content
+
+I've used code snippets and adjusted to my requirements from the following resources:
 
 [W3 Schools - How to Use Modals](https://www.w3schools.com/howto/howto_css_modals.asp)
 [Learn CSS grid](https://learncssgrid.com/)

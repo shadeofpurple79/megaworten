@@ -1,78 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Mega Worten</title>
-<meta name="description" content="Improve your German vocabulary and spelling with MegaWorten">
-<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-<link rel="icon" type="image/x-icon" href="assets/images/apple.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mega Worten</title>
+    <meta name="description" content="Improve your German vocabulary and spelling with MegaWorten">
+    <link rel="icon" type="image/x-icon" href="assets/images/apple.png">
 </head>
+
 <body>
-<!-- create a vertical grid of 4 rows - mobile view  -->
-<div id="container"> 
+    <!-- create a vertical grid of 4 rows - mobile view  -->
+    <div id="container">
 
-    <!-- first row of grid - header: logo, strapline, link to game rules new page  -->
-    <div id="game-header">
-        <img src="assets/images/logo.png" alt="Mega Worten">
-        <h1>Mega Worten</h1>
-        <h2>Improve your German vocabulary and spelling with MegaWorten</h2>
-    </div>
-
-    <!-- second row of grid - game rules  --> 
-    <!-- Trigger/Open The Modal -->
-    <button id="rulesBtn">Game Rules - How to Play</button>
-
-    <!-- The Modal -->
-    <div id="rulesModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-        <span class="close">&times;</span>
-        <ul>
-            <li>Click START GAME</li>
-            <li>Type in the German word for the picture you see and click GO</li>
-            <li><i class="fas fa-exclamation-triangle"></i> IMPORTANT! you must also enter the noun gender of the word, such as das, der, die </li>
-            <li>Click NEXT to see the next image</li>
-            <li>Continue until you answer all pictures correctly</li>
-        </ul>
+        <!-- first row of grid - header: logo, strapline, link to game rules new page  -->
+        <div id="game-header">
+            <img src="assets/images/logo.png" alt="Mega Worten">
+            <h1>Mega Worten</h1>
+            <h2>Improve your German vocabulary and spelling with MegaWorten</h2>
         </div>
-</div>
 
-    <!-- third row of grid - main game: split into 2 areas, for game question and game answer, and score. -->
-        <div id = "game-area">
-        <img id="game-image" src="assets/images/MegaWorten-logo.gif" alt="Game Image">
-        <br><br>
-        <!-- button to start the game -->
-        <button id="start-btn">START GAME</button>
-        <!--game message to be displayed according to correct or incorrect answer  -->
-        <p id="game-message"></p>
-        <br>
-    <!-- score is zero at the start of the game -->
-        <label for="game-input">Type the German word for the image you see:</label>
-        <!-- input field for user to type their answer: -->
-        <input type="text" id="game-input" name="game-input"> 
-        <!-- GO button, user will enter their answer and type go, but invisible at the start of the game -->
-        <button id="game-btn">GO</button>
-        <p>Score: <span id="user-score">0</span></p>
-        <!-- user clicks NEXT button after a correct or incorrect answer, to show the next image  -->
-        <button id="next-btn">NEXT</button>
-        <br>
-        <!-- user clicks NEW GAME button to start a new game  -->
-        <button id="new-btn">NEW GAME</button>
+        <!-- second row of grid - game rules  -->
+        <!-- Trigger/Open The Modal -->
+        <button id="rulesBtn">Game Rules - How to Play</button>
+
+        <!-- The Modal -->
+        <div id="rulesModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <ul>
+                    <li>Click START GAME</li>
+                    <li>Type in the German word for the picture you see and click GO</li>
+                    <li><i class="fas fa-exclamation-triangle"></i> IMPORTANT! you must also enter the noun gender of
+                        the word, such as das, der, die </li>
+                    <li>Click NEXT to see the next image</li>
+                    <li>Continue until you answer all pictures correctly</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- third row of grid - main game: split into 2 areas, for game question and game answer, and score. -->
+        <div id="game-area">
+            <img id="game-image" src="assets/images/MegaWorten-logo.gif" alt="Game Image">
+            <br><br>
+            <!-- button to start the game -->
+            <button id="start-btn">START GAME</button>
+            <!--game message to be displayed according to correct or incorrect answer  -->
+            <p id="game-message"></p>
+            <br>
+            <!-- score is zero at the start of the game -->
+            <label for="game-input">Type the German word for the image you see:</label>
+            <!-- input field for user to type their answer: -->
+            <input type="text" id="game-input" name="game-input">
+            <!-- GO button, user will enter their answer and type go, but invisible at the start of the game -->
+            <button id="game-btn">GO</button>
+            <p>Score: <span id="user-score">0</span></p>
+            <!-- user clicks NEXT button after a correct or incorrect answer, to show the next image  -->
+            <button id="next-btn">NEXT</button>
+            <br>
+            <!-- user clicks NEW GAME button to start a new game  -->
+            <button id="new-btn">NEW GAME</button>
+        </div>
+
+        <!-- fourth row of grid - footer: like this game? thumbs up or down, vote count, share on insta  -->
+        <div id="footer-social">
+            <h2>Like This Game? Share on <a href="https://instagram.com" target="_blank" rel="noopener"
+                    aria-label="Share the game on Instagram (icon opens in a new tab)"><i
+                        class="fab fa-instagram"></i></a> </h2>
+        </div>
     </div>
 
-    <!-- fourth row of grid - footer: like this game? thumbs up or down, vote count, share on insta  --> 
-    <div id="footer-social">
-        <h2>Like This Game? Share on <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Share the game on Instagram (icon opens in a new tab)"><i class="fab fa-instagram"></i></a> </h2>
-    </div>
-</div>
-
-<!-- font awesome script, use v5, free icons  -->
-<script src="https://kit.fontawesome.com/96530399f9.js" crossorigin="anonymous"></script>
-<script src="assets/js/script.js"></script>
+    <!-- font awesome script, use v5, free icons  -->
+    <script src="https://kit.fontawesome.com/96530399f9.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
+
 </html>
