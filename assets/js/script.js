@@ -23,82 +23,26 @@ window.onclick = function (event) {
 };
 
 // Create an array of 20 image objects with names in German
-const images = [{
-    name: "der apfel",
-    src: "assets/images/apple.png"
-  },
-  {
-    name: "die banana",
-    src: "assets/images/banana.png"
-  },
-  {
-    name: "die zitrone",
-    src: "assets/images/lemon.png"
-  },
-  {
-    name: "die orange",
-    src: "assets/images/orange.png"
-  },
-  {
-    name: "der pfirsich",
-    src: "assets/images/peach.png"
-  },
-  {
-    name: "die birne",
-    src: "assets/images/pear.png"
-  },
-  {
-    name: "die ananas",
-    src: "assets/images/pineapple.png"
-  },
-  {
-    name: "die pflaume",
-    src: "assets/images/plum.png"
-  },
-  {
-    name: "der granatapfel",
-    src: "assets/images/pomegranet.png"
-  },
-  {
-    name: "die erdbeere",
-    src: "assets/images/strawberry.png"
-  },
-  {
-    name: "die wassermelone",
-    src: "assets/images/watermelon.png"
-  },
-  {
-    name: "die katze",
-    src: "assets/images/cat.png"
-  },
-  {
-    name: "der hund",
-    src: "assets/images/dog.png"
-  },
-  {
-    name: "der goldfisch",
-    src: "assets/images/goldfish.png"
-  },
-  {
-    name: "die maus",
-    src: "assets/images/mouse.png"
-  },
-  {
-    name: "der wellensittich",
-    src: "assets/images/parrot.png"
-  },
-  {
-    name: "das kaninchen",
-    src: "assets/images/rabbit.png"
-  },
-  {
-    name: "die schlange",
-    src: "assets/images/snake.png"
-  },
-  {
-    name: "die schildkrote",
-    src: "assets/images/turtle.png"
-  }
+const images = [
+  {name: "der apfel", src: "assets/images/apple.png"},
+  {name: "die banana", src: "assets/images/banana.png"},
+  // {name: "die zitrone", src: "assets/images/lemon.png"},
+  // {name: "die orange", src: "assets/images/orange.png"},
+  // {name: "der pfirsich", src: "assets/images/peach.png"},
+  // {name: "die birne", src: "assets/images/pear.png"},
+  // {name: "die ananas", src: "assets/images/pineapple.png"},
+  // {name: "die pflaume", src: "assets/images/plum.png"},
+  // {name: "der granatapfel", src: "assets/images/pomegranet.png"},
+  // {name: "die erdbeere", src: "assets/images/strawberry.png"},
+  // {name: "die wassermelone", src: "assets/images/watermelon.png"},
+  // {name: "die katze", src: "assets/images/cat.png"},
+  // {name: "der hund", src: "assets/images/dog.png"},
+  // {name: "der goldfisch", src: "assets/images/goldfish.png"},
+  // {name: "die maus", src: "assets/images/mouse.png"},
+  // {name: "der wellensittich", src: "assets/images/parrot.png"},
+  // {name: "das kaninchen", src: "assets/images/rabbit.png"},
+  // {name: "die schlange", src: "assets/images/snake.png"},
+  // {name: "die schildkrote", src: "assets/images/turtle.png"}
 ];
 
 // DOM commands to call HTML elements
@@ -135,6 +79,7 @@ function startGame() {
   userScore.innerText = currentScore; /* Show score equals zero in html */
   gameMessage.innerHTML = "";
   remainingImages = [...images];
+  gameMessage.style.backgroundColor = "unset"; /* Make game message area not white */
 
   // calculate how many images left in the array using length, then pick a random image from the remaining game images
   currentImage = remainingImages[Math.floor(Math.random() * remainingImages.length)];
