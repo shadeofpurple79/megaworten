@@ -209,10 +209,10 @@ Bugs that have been fixed:
     - To fix this, I made a change to make the game messages disappear when the next button was clicked, using an if/then loop. 
 - Previous game message (correct or incorrect answer) was still displayed after the player started a new game.
     - To fix this, I made the game message to be blank when the function was called to start a new game. 
+- - When a second and subsequent new game is started, a white bank remains visible where the previous game messages would have been.
+    - To fix this, I used a code that sets the background colour of this game message area to unset.
 
 ## Unfixed Bugs
-
-- When a second and subsequent new game is started, a white bank remains visible where the previous game messages would have been. 
 
 There are no remaining bugs that I am aware of.
 
