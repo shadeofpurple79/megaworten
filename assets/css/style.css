@@ -142,6 +142,10 @@ input[type="submit"] {
   text-align: center;
 }
 
+#play-area {
+  display: none;
+}
+
 #game-image {
   text-align: center;
   max-width: 100%;
