@@ -262,39 +262,38 @@ You can fork this repository by using the following steps:
 
 I've used a lot of resources to help me understand how Javascript works and how to create a basic simple game:
 
-[Learn JavaScript by Building 7 Games - Full Course - by Ania Kubów](https://youtu.be/ec8vSKJuZTk)
-[Learn CSS Grid the easy way](https://youtu.be/rg7Fvvl3taU)
-[Intro to Game Development with JavaScript - Full Tutorial - by FreeCodeCamp.org](https://youtu.be/3EMxBkqC4z0)
-[JavaScript DOM Manipulation – Full Course for Beginners - by FreeCodeCamp.org](https://youtu.be/5fb2aPlgoys)
-[Learn JavaScript Event Listeners In 18 Minutes - by Web Dev Simplified](https://youtu.be/XF1_MlZ5l6M)
-[Best Debugging Tips For Beginners - by Web Dev Simplified](https://youtu.be/gaminoBsQx0)
-[What Is ChatGPT And How Can It Make You A Better Developer - by Web Dev Simplified](https://youtu.be/Gmx-54k3pUk)
-[JavaScript Tutorial & Real JavaScript Projects](https://youtu.be/IyDVvGmzTlo)
-[JavaScript Arrays: Properties, Methods, and Manipulation (Part 1 to 7) - by Corey Schafer](https://youtu.be/8JgU2WmrZXI)
+- [Learn JavaScript by Building 7 Games - Full Course - by Ania Kubów](https://youtu.be/ec8vSKJuZTk)
+- [Learn CSS Grid the easy way](https://youtu.be/rg7Fvvl3taU)
+- [Intro to Game Development with JavaScript - Full Tutorial - by FreeCodeCamp.org](https://youtu.be/3EMxBkqC4z0)
+- [JavaScript DOM Manipulation – Full Course for Beginners - by FreeCodeCamp.org](https://youtu.be/5fb2aPlgoys)
+- [Learn JavaScript Event Listeners In 18 Minutes - by Web Dev Simplified](https://youtu.be/XF1_MlZ5l6M)
+- [Best Debugging Tips For Beginners - by Web Dev Simplified](https://youtu.be/gaminoBsQx0)
+- [What Is ChatGPT And How Can It Make You A Better Developer - by Web Dev Simplified](https://youtu.be/Gmx-54k3pUk)
+- [JavaScript Tutorial & Real JavaScript Projects](https://youtu.be/IyDVvGmzTlo)
+- [JavaScript Arrays: Properties, Methods, and Manipulation (Part 1 to 7) - by Corey Schafer](https://youtu.be/8JgU2WmrZXI)
 
 ### Content
 
 I've used code snippets and adjusted to my requirements from the following resources:
 
-[W3 Schools - How to Use Modals](https://www.w3schools.com/howto/howto_css_modals.asp)
-[Learn CSS grid](https://learncssgrid.com/)
-[W3 Schools HTML Meta Tags](https://www.w3schools.com/tags/tag_meta.asp)
-[W3 Schools Round Buttons](https://www.w3schools.com/howto/howto_css_round_buttons.asp)
-[W3 Schools Responsive Images](https://www.w3schools.com/howto/howto_css_image_responsive.asp)
-[W3 Schools Favicon](https://www.w3schools.com/html/html_favicon.asp)
-[W3 Schools DOM elements HTML](https://www.w3schools.com/js/js_htmldom_document.asp)
-[Stack Overflow How to hide a button after click](https://stackoverflow.com/questions/57716269/how-to-hide-a-button-after-click)
-[Stack Overflow How To Display Score](https://stackoverflow.com/questions/30008510/how-to-display-the-users-game-score-on-screen-in-realtime-instead-of-in-an-ale)
-[Stack Overflow Opposite of display:none](https://stackoverflow.com/questions/17630945/is-there-an-opposite-to-displaynone)
-[Stack Overflow Randomise Javascript Array](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
-[Stack Overflow Show Random Image From an Array](https://stackoverflow.com/questions/14004318/show-random-image-from-array-in-javascript)
+- [W3 Schools - How to Use Modals](https://www.w3schools.com/howto/howto_css_modals.asp)
+- [Learn CSS grid](https://learncssgrid.com/)
+- [W3 Schools HTML Meta Tags](https://www.w3schools.com/tags/tag_meta.asp)
+- [W3 Schools Round Buttons](https://www.w3schools.com/howto/howto_css_round_buttons.asp)
+- [W3 Schools Responsive Images](https://www.w3schools.com/howto/howto_css_image_responsive.asp)
+- [W3 Schools Favicon](https://www.w3schools.com/html/html_favicon.asp)
+- [W3 Schools DOM elements HTML](https://www.w3schools.com/js/js_htmldom_document.asp)
+- [Stack Overflow How to hide a button after click](https://stackoverflow.com/questions/57716269/how-to-hide-a-button-after-click)
+- [Stack Overflow How To Display Score](https://stackoverflow.com/questions/30008510/how-to-display-the-users-game-score-on-screen-in-realtime-instead-of-in-an-ale)
+- [Stack Overflow Opposite of display:none](https://stackoverflow.com/questions/17630945/is-there-an-opposite-to-displaynone)
+- [Stack Overflow Randomise Javascript Array](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+- [Stack Overflow Show Random Image From an Array](https://stackoverflow.com/questions/14004318/show-random-image-from-array-in-javascript)
 
 ### Media
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
 | [Canva](https://youtu.be/8JgU2WmrZXI) | Logo | image | I designed the logo myself using Canva |
-| 
 
 ### Acknowledgements
 
