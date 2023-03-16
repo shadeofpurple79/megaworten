@@ -52,15 +52,17 @@
             <!--game message to be displayed according to correct or incorrect answer  -->
             <p id="game-message"></p>
             <br>
-            <!-- score is zero at the start of the game -->
-            <label for="game-input">Type the German word for the image you see:</label>
-            <!-- input field for user to type their answer: -->
-            <input type="text" id="game-input" name="game-input">
-            <!-- GO button, user will enter their answer and type go, but invisible at the start of the game -->
-            <button id="game-btn">GO</button>
-            <p>Score: <span id="user-score">0</span></p>
-            <!-- user clicks NEXT button after a correct or incorrect answer, to show the next image  -->
-            <button id="next-btn">NEXT</button>
+            <div id="play-area">
+                <!-- score is zero at the start of the game -->
+                <label for="game-input">Type the German word for the image you see:</label>
+                <!-- input field for user to type their answer: -->
+                <input type="text" id="game-input" name="game-input">
+                <!-- GO button, user will enter their answer and type go, but invisible at the start of the game -->
+                <button id="game-btn">GO</button>
+                <p>Score: <span id="user-score">0</span></p>
+                <!-- user clicks NEXT button after a correct or incorrect answer, to show the next image  -->
+                <button id="next-btn">NEXT</button>
+            </div>
             <br>
             <!-- user clicks NEW GAME button to start a new game  -->
             <button id="new-btn">NEW GAME</button>
