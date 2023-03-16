@@ -55,6 +55,7 @@ let nextBtn = document.getElementById("next-btn");
 let userScore = document.getElementById("user-score");
 let startBtn = document.getElementById("start-btn");
 let newBtn = document.getElementById("new-btn");
+let playArea = document.getElementById("play-area");
 
 // Game status at the start, score is zero, full set of 20 images available, no image is shown to user
 let remainingImages = [...images]; /* Copy the images in the original array into a new array called remaining images */
@@ -71,6 +72,7 @@ startBtn.addEventListener("click", startGame);
 // Call the function to start the game when start button is clicked  
 function startGame() {
   // When game starts, hide start button, show go button, show next button, load all images in the original array
+  playArea.style.display = "block";
   startBtn.style.display = "none";
   gameBtn.style.display = "inline";
   nextBtn.style.display = "inline";
