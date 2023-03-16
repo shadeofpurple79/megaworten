@@ -214,7 +214,7 @@ Bugs that have been fixed:
 
 ## Unfixed Bugs
 
-There are no remaining bugs that I am aware of.
+There are no remaining bugs that I am aware of. My mentor has advised that my commit messages shouldn't be longer than 50 chars. There were no notes about this in the course module or the project instructions. But now I'm aware of a way to alleviate this for future projects. 
 
 ## Deployment
 
